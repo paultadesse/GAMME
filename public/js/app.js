@@ -19506,7 +19506,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-4xl font-bold"
+  "class": "text-4xl font-bold text-green-500"
 }, "Gamme Home page", -1
 /* HOISTED */
 );
