@@ -17,7 +17,7 @@
           px-12
         "
       >
-        <div class="space-y-2 bg-gray-50 py-2 px-4 opacity-75">
+        <div class="space-y-2 bg-gray-50 py-2 px-4 opacity-75 border-l-4 border-black">
           <p
             class="z-10 text-xl font-light uppercase tracking-widest text-black"
           >
@@ -39,6 +39,11 @@
             class="z-10 text-sm font-light uppercase tracking-widest text-black"
           >
             Ethiopia is the origin of everything
+          </p>
+          <hr>
+          <p class="text-sm tracking-wider max-w-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iste porro magnam. Unde libero id repellat eaque at aspernatur modi fugiat tenetur ducimus praesentium quaerat est, pariatur officiis, consequatur velit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iste porro magnam. Unde libero id repellat eaque at aspernatur modi fugiat tenetur ducimus praesentium quaerat est, pariatur officiis, consequatur velit!
           </p>
         </div>
       </div>
@@ -164,4 +169,9 @@ import Layout from "../Shared/Layout.vue";
 export default {
   layout: Layout,
 };
+</script>
+
+<script setup>
+import { ref } from "vue";
+let mainBg = ref('https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg')
 </script>

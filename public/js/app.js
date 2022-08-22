@@ -19511,10 +19511,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home.vue?vue&type=script&lang=js":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home.vue?vue&type=script&lang=js ***!
-  \*****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home.vue?vue&type=script&setup=true&lang=js":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home.vue?vue&type=script&setup=true&lang=js ***!
+  \****************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -19522,11 +19522,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Shared_Layout_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Shared/Layout.vue */ "./resources/js/Shared/Layout.vue");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _Shared_Layout_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Layout.vue */ "./resources/js/Shared/Layout.vue");
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  layout: _Shared_Layout_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-});
+
+var __default__ = {
+  layout: _Shared_Layout_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
+  name: 'Home',
+  setup: function setup(__props, _ref) {
+    var expose = _ref.expose;
+    expose();
+    var mainBg = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg');
+    var __returned__ = {
+      mainBg: mainBg,
+      Layout: _Shared_Layout_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+      ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref
+    };
+    Object.defineProperty(__returned__, '__isScriptSetup', {
+      enumerable: false,
+      value: true
+    });
+    return __returned__;
+  }
+}));
 
 /***/ }),
 
@@ -19648,22 +19668,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "py-32"
+};
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-7xl py-72"
-}, "heloo", -1
-/* HOISTED */
-);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"grid place-items-center min-h-screen\"><!-- Responsive Grid Layout --><div class=\"p-4 max-w-7xl grid gap-4 xs:grid-cols-2 xs:p-8 md:grid-cols-4 lg:gap-6\"><h1 class=\"text-4xl font-extrabold xs:col-span-2 xs:grid xs:gap-4 xs:grid-cols-2 md:col-span-3 md:text-5xl md:grid-cols-3 lg:text-6xl\"><span class=\"md:col-span-2 animate__animated animate__fadeInLeftBig\">Meet Gamme&#39;s artists</span></h1><p class=\"xs:row-start-2 xs:col-start-2 xs:self-center md:col-start-1 md:col-span-2 md:pr-12 md:text-lg\">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic itaque alias officiis.</p><div class=\"h-16 bg-gray-500 xs:h-auto xs:square animate__animated animate__fadeInRight\"></div><div class=\"h-16 bg-gray-500 xs:h-auto xs:square animate__animated animate__fadeInRight\"></div><div class=\"h-16 bg-gray-900 xs:h-auto xs:square\"></div><div class=\"h-16 bg-gray-500 xs:h-auto xs:square animate__animated animate__fadeInRight md:col-start-2\"></div><div class=\"h-16 bg-gray-900 xs:h-auto xs:square\"></div><div class=\"h-16 bg-gray-500 xs:h-auto xs:square animate__animated animate__fadeInRight\"></div><div class=\"h-16 bg-gray-500 xs:h-auto xs:square animate__animated animate__fadeInRight\"></div><div class=\"h-16 bg-gray-900 xs:h-auto xs:square\"></div><p class=\"self-center md:text-lg md:col-span-2 md:text-center md:px-4\">Lorem ipsum dolor, sit amet consectetur adipisicing elit, and some more.</p></div></div>", 1);
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-7xl py-72"
-}, "heloo", -1
-/* HOISTED */
-);
-
-var _hoisted_3 = [_hoisted_1, _hoisted_2];
+var _hoisted_3 = [_hoisted_2];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
 }
 
 /***/ }),
@@ -19682,7 +19695,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative h-screen w-full bg-cover bg-fixed bg-center bg-no-repeat\" style=\"background-image:url(&#39;https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg&#39;);\"><div class=\"absolute bottom-0 h-3/4\"><div class=\"animate__animated animate__fadeInLeft flex h-full w-full flex-col justify-center px-12\"><div class=\"space-y-2 bg-gray-50 py-2 px-4 opacity-75\"><p class=\"z-10 text-xl font-light uppercase tracking-widest text-black\"> Artist </p><p class=\"z-10 text-3xl font-light uppercase tracking-widest text-black\"> paul tad | modern arts </p><p class=\"z-10 text-sm font-light uppercase tracking-widest text-black\"> Ethiopia is the origin of everything </p></div></div></div><div class=\"absolute bottom-0 z-10 w-full px-12\"><div class=\"flex items-end justify-end\"><div class=\"flex items-center space-x-7 bg-white px-4 py-2 text-xs uppercase tracking-widest text-black\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6 cursor-pointer transition delay-100 ease-in hover:scale-105\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M11 17l-5-5m0 0l5-5m-5 5h12\"></path></svg><p>|</p><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6 cursor-pointer transition delay-100 ease-in hover:scale-105\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13 7l5 5m0 0l-5 5m5-5H6\"></path></svg></div></div></div><div class=\"absolute inset-0 -z-0 bg-black opacity-0\"></div></div><div class=\"h-screen bg-white\"><div class=\"h-full w-full bg-cover bg-fixed\" style=\"background-image:url(&#39;https://beerslondon.com/wp-content/uploads/2022/02/DSC9875HR-1.jpg&#39;);\"><div class=\"h-full bg-white bg-opacity-60 flex justify-center items-center\"><div class=\"space-y-4 text-center\"><p class=\"text-4xl font-bold\">The Virgin of the Rocks</p><p class=\"text-sm tracking-widest\">Leonardo da Vinci | c. 1483–86</p></div></div></div></div><div class=\"h-screen bg-white shadow-2xl\"><div class=\"h-full w-full bg-cover bg-fixed\" style=\"background-image:url(&#39;https://img.artlogic.net/w_1800,h_1800,c_limit/exhibit-e/559650f9cfaf34ff158b4568/17501fce6a6d591a21f1137204617611.jpeg&#39;);\"><div class=\"h-full flex justify-center items-center\"><div class=\"text-center space-y-4 bg-white py-16 bg-opacity-90 shadow-2xl\"><p class=\"text-4xl font-bold\">Head of a Woman</p><p class=\"text-sm tracking-widest\">Leonardo da Vinci | 1500–10</p><hr class=\"w-7 h-7 border-black mx-auto\"><p class=\"max-w-2xl text-gray-500\"> Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model. </p></div></div></div><!-- &lt;div class=&quot;&quot;&gt;&lt;p&gt;first&lt;/p&gt;&lt;/div&gt; --></div>", 3);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative h-screen w-full bg-cover bg-fixed bg-center bg-no-repeat\" style=\"background-image:url(&#39;https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg&#39;);\"><div class=\"absolute bottom-0 h-3/4\"><div class=\"animate__animated animate__fadeInLeft flex h-full w-full flex-col justify-center px-12\"><div class=\"space-y-2 bg-gray-50 py-2 px-4 opacity-75 border-l-4 border-black\"><p class=\"z-10 text-xl font-light uppercase tracking-widest text-black\"> Artist </p><p class=\"z-10 text-3xl font-light uppercase tracking-widest text-black\"> paul tad | modern arts </p><p class=\"z-10 text-sm font-light uppercase tracking-widest text-black\"> Ethiopia is the origin of everything </p><hr><p class=\"text-sm tracking-wider max-w-2xl\"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iste porro magnam. Unde libero id repellat eaque at aspernatur modi fugiat tenetur ducimus praesentium quaerat est, pariatur officiis, consequatur velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iste porro magnam. Unde libero id repellat eaque at aspernatur modi fugiat tenetur ducimus praesentium quaerat est, pariatur officiis, consequatur velit! </p></div></div></div><div class=\"absolute bottom-0 z-10 w-full px-12\"><div class=\"flex items-end justify-end\"><div class=\"flex items-center space-x-7 bg-white px-4 py-2 text-xs uppercase tracking-widest text-black\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6 cursor-pointer transition delay-100 ease-in hover:scale-105\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M11 17l-5-5m0 0l5-5m-5 5h12\"></path></svg><p>|</p><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6 cursor-pointer transition delay-100 ease-in hover:scale-105\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13 7l5 5m0 0l-5 5m5-5H6\"></path></svg></div></div></div><div class=\"absolute inset-0 -z-0 bg-black opacity-0\"></div></div><div class=\"h-screen bg-white\"><div class=\"h-full w-full bg-cover bg-fixed\" style=\"background-image:url(&#39;https://beerslondon.com/wp-content/uploads/2022/02/DSC9875HR-1.jpg&#39;);\"><div class=\"h-full bg-white bg-opacity-60 flex justify-center items-center\"><div class=\"space-y-4 text-center\"><p class=\"text-4xl font-bold\">The Virgin of the Rocks</p><p class=\"text-sm tracking-widest\">Leonardo da Vinci | c. 1483–86</p></div></div></div></div><div class=\"h-screen bg-white shadow-2xl\"><div class=\"h-full w-full bg-cover bg-fixed\" style=\"background-image:url(&#39;https://img.artlogic.net/w_1800,h_1800,c_limit/exhibit-e/559650f9cfaf34ff158b4568/17501fce6a6d591a21f1137204617611.jpeg&#39;);\"><div class=\"h-full flex justify-center items-center\"><div class=\"text-center space-y-4 bg-white py-16 bg-opacity-90 shadow-2xl\"><p class=\"text-4xl font-bold\">Head of a Woman</p><p class=\"text-sm tracking-widest\">Leonardo da Vinci | 1500–10</p><hr class=\"w-7 h-7 border-black mx-auto\"><p class=\"max-w-2xl text-gray-500\"> Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model. </p></div></div></div><!-- &lt;div class=&quot;&quot;&gt;&lt;p&gt;first&lt;/p&gt;&lt;/div&gt; --></div>", 3);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return _hoisted_1;
@@ -19746,7 +19759,7 @@ var _hoisted_2 = {
   "class": "h-full items-center text-sm font-light uppercase tracking-widest flex space-x-32"
 };
 var _hoisted_3 = {
-  "class": "list-none flex space-y-6 xl:space-y-0 xl:space-x-12 uppercase tracking-widest font-poppins"
+  "class": "animate__animated animate__fadeInDown list-none flex space-y-6 xl:space-y-0 xl:space-x-12 uppercase tracking-widest font-poppins"
 };
 
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Artists");
@@ -26493,14 +26506,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Home_vue_vue_type_template_id_6a63e488__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=6a63e488 */ "./resources/js/Pages/Home.vue?vue&type=template&id=6a63e488");
-/* harmony import */ var _Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js */ "./resources/js/Pages/Home.vue?vue&type=script&lang=js");
+/* harmony import */ var _Home_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Pages/Home.vue?vue&type=script&setup=true&lang=js");
 /* harmony import */ var _home_paul_Desktop_Jobs_GAMME_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_paul_Desktop_Jobs_GAMME_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Home_vue_vue_type_template_id_6a63e488__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Home.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_paul_Desktop_Jobs_GAMME_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Home_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Home_vue_vue_type_template_id_6a63e488__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Home.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -26609,18 +26622,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Home.vue?vue&type=script&lang=js":
-/*!*************************************************************!*\
-  !*** ./resources/js/Pages/Home.vue?vue&type=script&lang=js ***!
-  \*************************************************************/
+/***/ "./resources/js/Pages/Home.vue?vue&type=script&setup=true&lang=js":
+/*!************************************************************************!*\
+  !*** ./resources/js/Pages/Home.vue?vue&type=script&setup=true&lang=js ***!
+  \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Home_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Home.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home.vue?vue&type=script&lang=js");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Home_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Home.vue?vue&type=script&setup=true&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home.vue?vue&type=script&setup=true&lang=js");
  
 
 /***/ }),
