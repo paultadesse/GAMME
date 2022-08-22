@@ -1,6 +1,8 @@
 <template>
+<div class="snap-y snap-mandatory h-screen  overflow-y-auto">
+
   <div
-    class="relative h-screen w-full bg-cover bg-fixed bg-center bg-no-repeat"
+    class="relative h-screen snap-start w-full bg-cover bg-fixed bg-center bg-no-repeat"
     style="
       background-image: url('https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg');
     "
@@ -117,7 +119,7 @@
     <div class="absolute inset-0 -z-0 bg-black opacity-0"></div>
   </div>
 
-  <div class="h-screen bg-white">
+  <div class="h-screen snap-start bg-white">
     <div
       class="h-full w-full bg-cover bg-fixed"
       style="
@@ -135,14 +137,14 @@
     </div>
   </div>
 
-  <div class="h-screen bg-white shadow-2xl">
+  <div class="h-screen snap-start bg-white shadow-2xl">
     <div
       class="h-full w-full bg-cover bg-fixed"
       style="
         background-image: url('https://img.artlogic.net/w_1800,h_1800,c_limit/exhibit-e/559650f9cfaf34ff158b4568/17501fce6a6d591a21f1137204617611.jpeg');
       "
     >
-      <div class="h-full flex justify-center items-center">
+      <div class="relative h-full flex justify-center items-center">
         <div
           class="text-center space-y-4 bg-white py-16 bg-opacity-90 shadow-2xl"
         >
@@ -156,9 +158,13 @@
             suggesting that the drawing may have served as a model.
           </p>
         </div>
+      <div class="absolute bottom-0 w-full">
+        <Footer/>  
+      </div>
       </div>
     </div>
-    <!-- <div class=""><p>first</p></div> -->
+  </div>
+
   </div>
 
 
@@ -166,6 +172,7 @@
 
 <script>
 import Layout from "../Shared/Layout.vue";
+import Footer from "../Shared/Footer";
 export default {
   layout: Layout,
 };

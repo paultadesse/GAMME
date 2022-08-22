@@ -13,17 +13,13 @@
         <slot/>
    </section>
    <!-- footer goes here -->
-   <section>
-        <div class="bg-white py-12">
-            <div class="flex px-32">
-                <p class="tracking-widest uppercase">Gamme art Gallary</p>
-                <p class="tracking-widest uppercase px-12">|</p>
-                <p class="tracking-widest ">Footer goes here</p>
-            </div>
-        </div>
+   <!-- this condition is for the snap scroll on the home page  -->
+   <section :class="$page.component === 'Home'? 'hidden': 'block'">
+        <Footer/>
    </section>
 </template>
 
 <script setup>
 import Nav from "./Nav";
+import Footer from "./Footer";
 </script>

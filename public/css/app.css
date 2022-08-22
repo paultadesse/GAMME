@@ -536,11 +536,17 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.block {
+  display: block;
+}
 .flex {
   display: flex;
 }
 .grid {
   display: grid;
+}
+.hidden {
+  display: none;
 }
 .h-16 {
   height: 4rem;
@@ -560,6 +566,12 @@ video {
 .h-7 {
   height: 1.75rem;
 }
+.h-\[500px\] {
+  height: 500px;
+}
+.h-\[100px\] {
+  height: 100px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -572,6 +584,9 @@ video {
 .w-7 {
   width: 1.75rem;
 }
+.w-screen {
+  width: 100vw;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -580,6 +595,18 @@ video {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.snap-y {
+  scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
+}
+.snap-start {
+  scroll-snap-align: start;
+}
+.snap-center {
+  scroll-snap-align: center;
 }
 .list-none {
   list-style-type: none;
@@ -636,6 +663,27 @@ video {
 .self-center {
   align-self: center;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-clip {
+  overflow: clip;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-y-clip {
+  overflow-y: clip;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
 .border-l-4 {
   border-left-width: 4px;
 }
@@ -665,6 +713,22 @@ video {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
@@ -787,6 +851,9 @@ video {
 }
 .delay-100 {
   transition-delay: 100ms;
+}
+.delay-75 {
+  transition-delay: 75ms;
 }
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
