@@ -108,6 +108,7 @@
               viewBox="0 0 24 24"
               stroke="currentColor"
               stroke-width="2"
+              @click="handleShowPrevious"
             >
               <path
                 stroke-linecap="round"
@@ -133,6 +134,7 @@
               viewBox="0 0 24 24"
               stroke="currentColor"
               stroke-width="2"
+              @click="handleShowNext"
             >
               <path
                 stroke-linecap="round"
@@ -213,15 +215,15 @@ export default {
 
 <script setup>
 import { ref } from "vue";
-let mainBg = ref(
-  "https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg"
-);
-let mainBgContent = ref({
-  artistName: "Paul tad",
-  description:
-    "Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model.",
-});
 const slideImages = [
+  {
+    path: "https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg",
+    content: {
+      artistName: "Paul tad",
+      description:
+        "Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model.",
+    },
+  },
   {
     path: "https://img.artlogic.net/w_1800,h_1800,c_limit/exhibit-e/559650f9cfaf34ff158b4568/17501fce6a6d591a21f1137204617611.jpeg",
     content: {
@@ -247,15 +249,39 @@ const slideImages = [
     },
   },
 ];
-var counter = 0;
+let counter = ref(0);
+let mainBg = ref(slideImages[0].path);
+let mainBgContent = ref(slideImages[0].content);
+
 setInterval(function () {
-  mainBg.value = slideImages[counter].path;
-  mainBgContent.value = slideImages[counter].content;
-  counter++;
-  if (counter > slideImages.length - 1) {
-    counter = 0;
+  mainBg.value = slideImages[counter.value].path;
+  mainBgContent.value = slideImages[counter.value].content;
+  counter.value++;
+  if (counter.value > slideImages.length - 1) {
+    counter.value = 0;
   }
 }, 5000);
+
+function getCurrentImageIndex() {
+  const index = slideImages.map((object) => object.path).indexOf(mainBg.value);
+  return index;
+}
+
+function handleShowPrevious() {
+  getCurrentImageIndex() == 0
+    ? (counter.value = slideImages.length - 1)
+    : (counter.value = getCurrentImageIndex() - 1);
+  mainBg.value = slideImages[counter.value].path;
+  mainBgContent.value = slideImages[counter.value].content;
+}
+
+function handleShowNext() {
+  getCurrentImageIndex() != slideImages.length - 1
+    ? (counter.value = getCurrentImageIndex() + 1)
+    : (counter.value = 0);
+  mainBg.value = slideImages[counter.value].path;
+  mainBgContent.value = slideImages[counter.value].content;
+}
 </script>
 <style>
 .slide {

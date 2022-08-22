@@ -19536,12 +19536,13 @@ var __default__ = {
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
-    var mainBg = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)("https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg");
-    var mainBgContent = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)({
-      artistName: "Paul tad",
-      description: "Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model."
-    });
     var slideImages = [{
+      path: "https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto/ws-addisfineart/usr/images/pages/slideshow_data/1/addisgezehagn_floatingcity_installphotography_june2022_addisfineart_lucyemms-16-.jpg",
+      content: {
+        artistName: "Paul tad",
+        description: "Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model."
+      }
+    }, {
       path: "https://img.artlogic.net/w_1800,h_1800,c_limit/exhibit-e/559650f9cfaf34ff158b4568/17501fce6a6d591a21f1137204617611.jpeg",
       content: {
         artistName: "BenOmi Tekle",
@@ -19560,21 +19561,46 @@ var __default__ = {
         description: "Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model."
       }
     }];
-    var counter = 0;
+    var counter = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(0);
+    var mainBg = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(slideImages[0].path);
+    var mainBgContent = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(slideImages[0].content);
     setInterval(function () {
-      mainBg.value = slideImages[counter].path;
-      mainBgContent.value = slideImages[counter].content;
-      counter++;
+      mainBg.value = slideImages[counter.value].path;
+      mainBgContent.value = slideImages[counter.value].content;
+      counter.value++;
 
-      if (counter > slideImages.length - 1) {
-        counter = 0;
+      if (counter.value > slideImages.length - 1) {
+        counter.value = 0;
       }
     }, 5000);
+
+    function getCurrentImageIndex() {
+      var index = slideImages.map(function (object) {
+        return object.path;
+      }).indexOf(mainBg.value);
+      return index;
+    }
+
+    function handleShowPrevious() {
+      getCurrentImageIndex() == 0 ? counter.value = slideImages.length - 1 : counter.value = getCurrentImageIndex() - 1;
+      mainBg.value = slideImages[counter.value].path;
+      mainBgContent.value = slideImages[counter.value].content;
+    }
+
+    function handleShowNext() {
+      getCurrentImageIndex() != slideImages.length - 1 ? counter.value = getCurrentImageIndex() + 1 : counter.value = 0;
+      mainBg.value = slideImages[counter.value].path;
+      mainBgContent.value = slideImages[counter.value].content;
+    }
+
     var __returned__ = {
-      mainBg: mainBg,
-      mainBgContent: mainBgContent,
       slideImages: slideImages,
       counter: counter,
+      mainBg: mainBg,
+      mainBgContent: mainBgContent,
+      getCurrentImageIndex: getCurrentImageIndex,
+      handleShowPrevious: handleShowPrevious,
+      handleShowNext: handleShowNext,
       Layout: _Shared_Layout_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
       Footer: _Shared_Footer__WEBPACK_IMPORTED_MODULE_2__["default"],
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref
@@ -19772,27 +19798,64 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_9 = {
   "class": "text-sm tracking-wider max-w-2xl"
 };
+var _hoisted_10 = {
+  "class": "absolute bottom-0 z-10 w-full px-12"
+};
+var _hoisted_11 = {
+  "class": "flex items-end justify-end"
+};
+var _hoisted_12 = {
+  "class": "flex items-center space-x-7 bg-white px-4 py-2 text-xs uppercase tracking-widest text-black"
+};
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"absolute bottom-0 z-10 w-full px-12\"><div class=\"flex items-end justify-end\"><div class=\"flex items-center space-x-7 bg-white px-4 py-2 text-xs uppercase tracking-widest text-black\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6 cursor-pointer transition delay-100 ease-in hover:scale-105\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M11 17l-5-5m0 0l5-5m-5 5h12\"></path></svg><p>|</p><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6 cursor-pointer transition delay-100 ease-in hover:scale-105\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13 7l5 5m0 0l-5 5m5-5H6\"></path></svg></div></div></div><div class=\"absolute inset-0 -z-0 bg-black opacity-0\"></div>", 2);
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  d: "M11 17l-5-5m0 0l5-5m-5 5h12"
+}, null, -1
+/* HOISTED */
+);
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"h-screen snap-start bg-white\"><div class=\"h-full w-full bg-cover bg-fixed\" style=\"background-image:url(&#39;https://beerslondon.com/wp-content/uploads/2022/02/DSC9875HR-1.jpg&#39;);\"><div class=\"h-full bg-white bg-opacity-60 flex justify-center items-center\"><div class=\"space-y-4 text-center\"><p class=\"text-4xl font-bold\">The Virgin of the Rocks</p><p class=\"text-sm tracking-widest\"> Leonardo da Vinci | c. 1483–86 </p></div></div></div></div>", 1);
+var _hoisted_14 = [_hoisted_13];
 
-var _hoisted_13 = {
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "|", -1
+/* HOISTED */
+);
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  d: "M13 7l5 5m0 0l-5 5m5-5H6"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_17 = [_hoisted_16];
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "absolute inset-0 -z-0 bg-black opacity-0"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"h-screen snap-start bg-white\"><div class=\"h-full w-full bg-cover bg-fixed\" style=\"background-image:url(&#39;https://beerslondon.com/wp-content/uploads/2022/02/DSC9875HR-1.jpg&#39;);\"><div class=\"h-full bg-white bg-opacity-60 flex justify-center items-center\"><div class=\"space-y-4 text-center\"><p class=\"text-4xl font-bold\">The Virgin of the Rocks</p><p class=\"text-sm tracking-widest\"> Leonardo da Vinci | c. 1483–86 </p></div></div></div></div>", 1);
+
+var _hoisted_20 = {
   "class": "h-screen snap-start bg-white shadow-2xl"
 };
-var _hoisted_14 = {
+var _hoisted_21 = {
   "class": "h-full w-full bg-cover bg-fixed",
   style: {
     "background-image": "url('https://img.artlogic.net/w_1800,h_1800,c_limit/exhibit-e/559650f9cfaf34ff158b4568/17501fce6a6d591a21f1137204617611.jpeg')"
   }
 };
-var _hoisted_15 = {
+var _hoisted_22 = {
   "class": "relative h-full flex justify-center items-center"
 };
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"text-center space-y-4 bg-white py-16 bg-opacity-90 shadow-2xl\"><p class=\"text-4xl font-bold\">Head of a Woman</p><p class=\"text-sm tracking-widest\">Leonardo da Vinci | 1500–10</p><hr class=\"w-7 h-7 border-black mx-auto\"><p class=\"max-w-2xl text-gray-500\"> Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model. </p></div>", 1);
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"text-center space-y-4 bg-white py-16 bg-opacity-90 shadow-2xl\"><p class=\"text-4xl font-bold\">Head of a Woman</p><p class=\"text-sm tracking-widest\">Leonardo da Vinci | 1500–10</p><hr class=\"w-7 h-7 border-black mx-auto\"><p class=\"max-w-2xl text-gray-500\"> Head of a Woman, a small brush drawing with pigment, depicts a young woman with her head tilted and her eyes downcast. Her posture recalls the Virgin Mary in Leonardo’s The Virgin of the Rocks, suggesting that the drawing may have served as a model. </p></div>", 1);
 
-var _hoisted_17 = {
+var _hoisted_24 = {
   "class": "absolute bottom-0 w-full"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -19805,9 +19868,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), _hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.mainBgContent["description"]), 1
   /* TEXT */
-  )])])]), _hoisted_10], 4
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    "class": "h-6 w-6 cursor-pointer transition delay-100 ease-in hover:scale-105",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    onClick: $setup.handleShowPrevious
+  }, _hoisted_14)), _hoisted_15, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    "class": "h-6 w-6 cursor-pointer transition delay-100 ease-in hover:scale-105",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor",
+    "stroke-width": "2",
+    onClick: $setup.handleShowNext
+  }, _hoisted_17))])])]), _hoisted_18], 4
   /* STYLE */
-  ), _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Footer"])])])])])]);
+  ), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Footer"])])])])])]);
 }
 
 /***/ }),
