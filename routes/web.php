@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/artists', function () {
     return Inertia::render('Artists');
 });
+
+Route::get('/artist/leonardo-da-vinci', function () {
+    return Inertia::render('Artist/Show');
+});
