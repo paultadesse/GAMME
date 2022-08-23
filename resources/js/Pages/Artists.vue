@@ -138,7 +138,7 @@
         >
           <img
             class="absolute h-full w-full object-cover"
-            src="http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcR8gQcD5ewEV7b-FcPzhJ2u6OGX_lChJROgta0c6zyRPPLSe2ES6yKJQvxiQOoyjdhp"
+            src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2MzU4MjUzMDA4MDcwMzE4/portrait-of-leonardo-da-vinci-1452-1519-getty.jpg"
             alt=""
             srcset=""
           />
