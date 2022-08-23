@@ -11,7 +11,11 @@ module.exports = {
       xs: '540px',
       ...defautTheme.screens,
     },
-    extend: {},
+    extend: {
+      spacing: {
+        'full': '100%'
+      }
+    },
   },
   plugins: [],
 }

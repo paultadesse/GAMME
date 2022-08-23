@@ -1,7 +1,7 @@
 <template>
   <section>
     <header>
-      <div class="shadw-2xl absolute top-0 h-16 w-full text-black">
+      <div class="shadw-2xl absolute top-0 h-28 w-full text-black">
         <div class="flex h-full w-full items-center justify-between px-12">
           <NavLink
             href="/"
