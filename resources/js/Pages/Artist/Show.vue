@@ -29,8 +29,8 @@
           "
         >
           <div class="px-4 text-white">
-            <h1 class="">Afewerk Tekle</h1>
-            <span>B. 1932</span>
+            <h1 class="">{{ artist.first_name  }}</h1>
+            <span>B. {{ artist.date_of_birth }}</span>
           </div>
         </div>
       </div>
@@ -54,9 +54,9 @@
         </div>
         <!-- artist content goes here it could be [ biography, works or exhibition ]  -->
         <div class="flex justify-center pt-16">
-            <Biography v-if="show_biography" class="z-10"/>
-            <Works v-if="show_works" class="z-10"/>
-            <Exhibition v-if="show_exhibition"/>
+            <Biography v-if="show_biography" class="z-10" :biography="artist.biography"/>
+            <Works v-if="show_works" class="z-10" :works="artist.works" :artistSlug="artist.slug" />
+            <Exhibition v-if="show_exhibition" class="z-10" :exhibitions="artist.exhibitions"/>
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@ export default {
 </script>
 <script setup>
 import { breakStatement } from "@babel/types";
-import { ref, defineAsyncComponent } from "vue";
+import { ref, defineAsyncComponent, defineProps } from "vue";
 
 const show_biography = ref(true);
 const show_works = ref(false);
@@ -79,6 +79,10 @@ const show_exhibition = ref(false);
 const Biography = defineAsyncComponent(() => import('../../Components/Artist/Biography.vue'))
 const Works = defineAsyncComponent(() => import('../../Components/Artist/Works.vue'))
 const Exhibition = defineAsyncComponent(() => import('../../Components/Artist/Exhibition.vue'))
+
+const props = defineProps({
+  artist: Object
+})
 
 function handleComponents(show){
     switch (show) {

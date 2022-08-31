@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white">
-    <div class="col-span-2 w-96 xl:col-span-4 bg-black shadow-2xl hover:scale-105 hover:z-20 transition ease-in delay-100" v-for="exhibition in 8" :key="exhibition">
+  <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white px-4">
+    <div class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="exhibition in exhibitions" :key="exhibition.id">
       <div
         class="
           relative
@@ -12,7 +12,7 @@
       >
         <img
           class="absolute h-full w-full object-cover"
-          src="https://uploads6.wikiart.org/images/afewerk-tekle/the-total-liberation-of-africa.jpg!Large.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
           alt=""
           srcset=""
         />
@@ -27,11 +27,23 @@
           animate__animated animate__fadeInLeft
         "
       >
-        <div class="text-center text-white">
-          <h1 class="">Afewerk Tekle</h1>
-          <span>exhibition {{ exhibition }}</span>
+        <div class="text-center py-2">
+          <h1 class="truncate"> {{ exhibition.title }}</h1>
+          <!-- <span>some desc ... </span> -->
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { computed, defineProps } from 'vue';
+
+const props = defineProps({
+  exhibitions: Object
+})
+
+const exhibitions = computed(() => {
+  return props.exhibitions
+})
+</script>

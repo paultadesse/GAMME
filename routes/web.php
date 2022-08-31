@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArtistController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -18,10 +19,10 @@ Route::get('/', function () {
     return Inertia::render('Home');
 });
 
-Route::get('/artists', function () {
-    return Inertia::render('Artists');
-});
 
-Route::get('/artist/leonardo-da-vinci', function () {
-    return Inertia::render('Artist/Show');
+Route::prefix('artists')->group(function() {
+    Route::get('/', [ArtistController::class, 'index'])->name('artists.index');
+    Route::get('{artist}',[ArtistController::class, 'show'])->name('artists.show');
+    // don't forget to create view for artist work 
+    Route::get('{artist}/works/{work}',[ArtistController::class, 'show'])->name('artists.works.show');
 });

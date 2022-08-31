@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white">
-    <div class="col-span-2 xl:col-span-3 bg-black shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="work in 17" :key="work">
+  <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white px-4">
+    <Link  :href="route('artists.works.show', { artist: artistSlug, work: work.slug })" class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="work in works" :key="work.id">
       <div
         class="
           relative
@@ -27,11 +27,31 @@
           animate__animated animate__fadeInLeft
         "
       >
-        <div class="text-center text-white">
-          <h1 class="">Afewerk Tekle</h1>
-          <span>work {{ work }}</span>
+        <div class="text-center py-2">
+          <h1 class="truncate"> {{ work.title }}</h1>
+          <!-- <span>some desc ... </span> -->
         </div>
       </div>
-    </div>
+    </Link>
   </div>
 </template>
+
+<script setup>
+import { computed, defineProps } from 'vue';
+import { Link } from '@inertiajs/inertia-vue3'
+
+const route = computed(() => { return window.route })
+
+const props = defineProps({
+  works: Object,
+  artistSlug: String
+})
+
+const works = computed(() => {
+  return props.works
+})
+
+const artistSlug = computed(() => {
+  return props.artistSlug
+})
+</script>
