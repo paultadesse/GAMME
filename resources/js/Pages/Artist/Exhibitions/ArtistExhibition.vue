@@ -1,0 +1,124 @@
+<template>
+  <div class="pt-48 pb-12 px-12">
+    <div class="xl:flex items-start bg-white justify-between">
+      <div class="w-full max-w-sm bg-white shadow-2xl xl:sticky top-0 mx-auto">
+        <div
+          class="
+            relative
+            pb-full
+            bg-gray-500
+            xs:h-auto xs:rectangle
+            animate__animated animate__fadeIn
+          "
+        >
+          <img
+            class="absolute h-full w-full object-cover"
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <div class="flex-1 space-y-7 px-7">
+        <p class="uppercase tracking-wider text-4xl">{{ exhibition.title }}</p>
+        <hr />
+        <p class="uppercase text-xs text-gray-500 tracking-widest">
+          featured artists
+        </p>
+        <div class="flex items-center -space-x-3 overflow-hidden">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
+            :alt="featured_artist.slug"
+            class="rounded-full w-16 h-16 object-cover border-4 border-white"
+            v-for="featured_artist in exhibition.artists"
+            :key="featured_artist"
+          />
+        </div>
+        <div class="flex space-x-2">
+          <p class="tracking-widest font-light">
+            {{ formatFeaturedArtists() }}
+          </p>
+        </div>
+        <p
+          class="
+            animate__animated animate__fadeInUp
+            max-w-2xl
+            text-gray-600
+            tracking-wider
+            first-letter:text-4xl
+            font-light
+            leading-relaxed
+            text-justify
+          "
+        >
+          {{ exhibition.description }}
+        </p>
+        <hr class="opacity-40 max-w-2xl" />
+        <p class="tracking-widest text-sm">
+          <span class="uppercase text-xs text-gray-500"
+            >Other exhibitions by -
+          </span>
+          {{ artist.first_name }}
+        </p>
+        <!-- similar exhibitions by this artist -->
+        <Exhibition :artist="artist" />
+      </div>
+    </div>
+  </div>
+</template>
+    
+  <script>
+import Layout from "../../../Shared/Layout.vue";
+import { Link } from "@inertiajs/inertia-vue3";
+export default {
+  layout: Layout,
+  components: {
+    Link,
+  },
+};
+</script>
+<script setup>
+import { defineProps, computed } from "vue";
+import Exhibition from "../../../Components/Artist/Exhibition.vue";
+
+const props = defineProps({
+  exhibition: Object,
+  artist: Object,
+});
+
+const exhibition = computed(() => {
+  return props.exhibition;
+});
+
+const artist = computed(() => {
+  for (let index = 0; index < props.artist.exhibitions.length; index++) {
+    const element = props.artist.exhibitions[index];
+    // remove the current exhibition from the object
+    if (element.id === exhibition.value.id)
+      props.artist.exhibitions.splice(index, 1);
+  }
+  return props.artist;
+});
+
+function formatFeaturedArtists() {
+  let artistsNames = "";
+  if (exhibition.value.artists.length > 1) {
+    for (let index = 0; index < exhibition.value.artists.length; index++) {
+      const element = exhibition.value.artists[index].first_name;
+
+      artistsNames += element;
+      if (
+        index != exhibition.value.artists.length - 1 &&
+        index != exhibition.value.artists.length - 2
+      ) {
+        artistsNames += ", ";
+      }
+      if (index == exhibition.value.artists.length - 2) {
+        artistsNames += " & ";
+      }
+    }
+    return artistsNames;
+  }
+  return artist.value.first_name;
+}
+</script>

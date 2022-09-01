@@ -56,7 +56,7 @@
         <div class="flex justify-center pt-16">
             <Biography v-if="show_biography" class="z-10" :biography="artist.biography"/>
             <Works v-if="show_works" class="z-10" :artist="artist" />
-            <Exhibition v-if="show_exhibition" class="z-10" :exhibitions="artist.exhibitions"/>
+            <Exhibition v-if="show_exhibition" class="z-10" :artist="artist"/>
         </div>
       </div>
     </div>

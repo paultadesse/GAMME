@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white px-4">
-    <div class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="exhibition in exhibitions" :key="exhibition.id">
+    <Link :href="route('artists.exhibitions.show', {artist: artist, exhibition: exhibition })" class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="exhibition in artist.exhibitions" :key="exhibition.id">
       <div
         class="
           relative
@@ -32,18 +32,21 @@
           <!-- <span>some desc ... </span> -->
         </div>
       </div>
-    </div>
+    </Link>
   </div>
 </template>
 
 <script setup>
 import { computed, defineProps } from 'vue';
+import { Link } from '@inertiajs/inertia-vue3'
+
+const route = computed(() => { return window.route })
 
 const props = defineProps({
-  exhibitions: Object
+  artist: Object,
 })
 
-const exhibitions = computed(() => {
-  return props.exhibitions
+const artist = computed(() => {
+  return props.artist
 })
 </script>

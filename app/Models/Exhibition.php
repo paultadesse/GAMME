@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Exhibition extends Model
 {
     use HasFactory;
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
     
     public function artists()
     {
