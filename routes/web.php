@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -24,5 +25,5 @@ Route::prefix('artists')->group(function() {
     Route::get('/', [ArtistController::class, 'index'])->name('artists.index');
     Route::get('{artist}',[ArtistController::class, 'show'])->name('artists.show');
     // don't forget to create view for artist work 
-    Route::get('{artist}/works/{work}',[ArtistController::class, 'show'])->name('artists.works.show');
+    Route::get('{artist}/works/{work}',[WorkController::class, 'show'])->name('artists.works.show');
 });

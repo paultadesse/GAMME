@@ -9,6 +9,11 @@ class Work extends Model
 {
     use HasFactory;
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function artist()
     {
         return $this->belongsTo(Artist::class);

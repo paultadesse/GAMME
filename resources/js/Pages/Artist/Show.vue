@@ -55,7 +55,7 @@
         <!-- artist content goes here it could be [ biography, works or exhibition ]  -->
         <div class="flex justify-center pt-16">
             <Biography v-if="show_biography" class="z-10" :biography="artist.biography"/>
-            <Works v-if="show_works" class="z-10" :works="artist.works" :artistSlug="artist.slug" />
+            <Works v-if="show_works" class="z-10" :artist="artist" />
             <Exhibition v-if="show_exhibition" class="z-10" :exhibitions="artist.exhibitions"/>
         </div>
       </div>

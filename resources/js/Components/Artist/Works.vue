@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white px-4">
-    <Link  :href="route('artists.works.show', { artist: artistSlug, work: work.slug })" class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="work in works" :key="work.id">
+    <Link  :href="route('artists.works.show', {artist: artist, work: work })" class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="work in artist.works" :key="work.id">
       <div
         class="
           relative
@@ -43,15 +43,11 @@ import { Link } from '@inertiajs/inertia-vue3'
 const route = computed(() => { return window.route })
 
 const props = defineProps({
-  works: Object,
-  artistSlug: String
+  artist: Object,
 })
 
-const works = computed(() => {
-  return props.works
+const artist = computed(() => {
+  return props.artist
 })
 
-const artistSlug = computed(() => {
-  return props.artistSlug
-})
 </script>

@@ -83,8 +83,7 @@
           using conscious skill and creative imagination the great artists of
           the Renaissance an artist specializing in watercolors.
         </p>
-        <Link
-          href="/artist/leonardo-da-vinci"
+        <div
           class="
             relative
             pb-full
@@ -102,7 +101,7 @@
             src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
             alt=""
           />
-        </Link>
+        </div>
         <div
           class="
             relative

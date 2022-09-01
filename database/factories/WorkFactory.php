@@ -14,13 +14,13 @@ class WorkFactory extends Factory
      */
     public function definition()
     {   
-        $title = $this->faker->sentence(rand(5,7));
+        $title = $this->faker->sentence(rand(1,3));
         $datetime = $this->faker->dateTimeBetween('-1 month', 'now');
 
         return [
             'title' => $title,
             'slug' => Str::slug($title) . '-' . rand(1111, 9999),
-            'description' => $this->faker->sentence,
+            'description' => $this->faker->sentence(250),
             'photo' => basename($this->faker->image(storage_path('app/public'))),
             'created_at' => $datetime,
             'updated_at' => $datetime,
