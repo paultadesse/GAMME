@@ -1,7 +1,7 @@
 <template>
   <div class="pt-48 pb-12 px-12">
     <div class="xl:flex items-start bg-white justify-between">
-      <div class="w-full max-w-sm bg-white shadow-2xl xl:sticky top-0 mx-auto">
+      <div class="w-full max-w-lg bg-white shadow-2xl xl:sticky top-0 mx-auto">
         <div
           class="
             relative
@@ -42,7 +42,7 @@
         <p
           class="
             animate__animated animate__fadeInUp
-            max-w-2xl
+            max-w-7xl
             text-gray-600
             tracking-wider
             first-letter:text-4xl
@@ -54,13 +54,24 @@
           {{ exhibition.description }}
         </p>
         <hr class="opacity-40 max-w-2xl" />
+
+        <p class="uppercase text-sm text-gray-500 tracking-widest">Installation views</p>
+        <div class="flex items-center space-x-3 overflow-hidden">
+          <img
+            src="https://kam.illinois.edu/sites/kam.illinois.edu/files/styles/home_slider/public/f2020_ArtSince1948_p1_0.jpg?itok=HJdPAwJz"
+            :alt="exhibition_image.id"
+            class="w-96 h-auto object-cover"
+            v-for="exhibition_image in exhibition.exhibition_images"
+            :key="exhibition_image.id"
+          />
+        </div>
+        <!-- similar exhibitions by this artist -->
         <p class="tracking-widest text-sm">
-          <span class="uppercase text-xs text-gray-500"
+          <span class="uppercase text-gray-500"
             >Other exhibitions by -
           </span>
           {{ artist.first_name }}
         </p>
-        <!-- similar exhibitions by this artist -->
         <Exhibition :artist="artist" />
       </div>
     </div>

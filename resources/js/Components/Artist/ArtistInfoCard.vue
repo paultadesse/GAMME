@@ -4,13 +4,13 @@
       class="
         relative
         pb-full
-        bg-gray-500
+        bg-white
         xs:h-auto xs:square
         animate__animated animate__fadeIn animate_delay-2s
       "
     >
       <img
-        class="absolute h-full w-full object-cover"
+        class="absolute h-full w-full object-cover p-4"
         src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
         alt=""
         srcset=""

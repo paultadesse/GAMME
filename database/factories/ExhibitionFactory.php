@@ -22,7 +22,7 @@ class ExhibitionFactory extends Factory
         return [
             'title' => $title,
             'slug' => Str::slug($title) . '-' . rand(1111, 9999),
-            'description' => $this->faker->sentence,
+            'description' => $this->faker->sentence(150),
             'cover_image' => basename($this->faker->image(storage_path('app/public'))),
             'starting_date' =>  $starting_datetime,
             'end_date' => $end_datetime,

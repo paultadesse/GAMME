@@ -29,3 +29,7 @@ Route::prefix('artists')->group(function() {
     Route::get('{artist}/works/{work}',[WorkController::class, 'show'])->name('artists.works.show');
     Route::get('{artist}/exhibitions/{exhibition}',[ExhibitionController::class, 'show'])->name('artists.exhibitions.show');
 });
+
+Route::prefix('exhibitions')->group(function(){
+    Route::get('/', [ExhibitionController::class, 'index'])->name('exhibitions.index');
+});

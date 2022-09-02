@@ -53,7 +53,7 @@
           <div :class="show_exhibition ? 'border-b-4 border-black text-lg font-bold' : 'text-gray-500'" class="cursor-pointer" @click="handleComponents('show_exhibition')">exhibition</div>
         </div>
         <!-- artist content goes here it could be [ biography, works or exhibition ]  -->
-        <div class="flex justify-center pt-16">
+        <div class="flex justify-center pt-16 px-4">
             <Biography v-if="show_biography" class="z-10" :biography="artist.biography"/>
             <Works v-if="show_works" class="z-10" :artist="artist" />
             <Exhibition v-if="show_exhibition" class="z-10" :artist="artist"/>
