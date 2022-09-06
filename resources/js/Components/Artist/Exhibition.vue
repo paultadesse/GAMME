@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white">
-    <Link :href="route('artists.exhibitions.show', {artist: artist, exhibition: exhibition })" class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="exhibition in artist.exhibitions" :key="exhibition.id">
+  <div class="grid grid-cols-4 xl:grid-cols-12 gap-2 xl:gap-4 bg-whsite">
+    <Link :href="route('artists.exhibitions.show', {artist: artist, exhibition: exhibition })" class="col-span-4 md:col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="exhibition in artist.exhibitions" :key="exhibition.id">
       <div
         class="
           relative

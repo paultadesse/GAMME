@@ -1,10 +1,11 @@
 <template>
-  <div class="pt-44 px-16">
+  <div class="pt-44 xl:px-16">
     <!-- list of exhibitions -->
-    <div class="grid grid-cols-4 xl:grid-cols-12 gap-4 bg-white px-16">
+    <div class="grid grid-cols-4 xl:grid-cols-12 gap-2 xl:gap-4 bg-white xl:px-16">
       <div
         class="
-          col-span-2
+          col-span-4
+          md:col-span-2
           xl:col-span-3
           bg-white
           shadow-2xl

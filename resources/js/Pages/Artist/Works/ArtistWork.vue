@@ -1,7 +1,7 @@
 <template>
-  <div class="pt-48 pb-12 px-12">
+  <div class="pt-48 pb-12 xl:px-12">
     <div class="xl:flex items-start bg-white justify-between">
-      <div class="w-full max-w-xl bg-white shadow-2xl xl:sticky top-0 mx-auto">
+      <div class="w-full max-w-xl bg-white xl:shadow-2xl xl:sticky top-0 mx-auto">
         <div
           class="
             relative
@@ -19,8 +19,8 @@
           />
         </div>
       </div>
-      <div class="xl:w-1/2 space-y-7">
-        <p class="uppercase tracking-wider text-4xl">{{ work.title }}</p>
+      <div class="xl:w-1/2 space-y-7 px-2">
+        <p class="uppercase tracking-wider text-4xl py-2">{{ work.title }}</p>
         <hr />
         <div class="flex items-center space-x-2">
           <img

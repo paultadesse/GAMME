@@ -1,10 +1,10 @@
 <template>
-  <div class="border-l p-8 bg-white">
+  <div class="border-l p-8 bg-wshite">
     <p
       class="
         animate__animated animate__fadeInUp
         max-w-3xl
-        text-gray-600
+        text-gray-900
         tracking-wider
         first-letter:text-4xl
         font-light

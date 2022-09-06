@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white">
-    <Link  :href="route('artists.works.show', {artist: artist, work: work })" class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="work in artist.works" :key="work.id">
+  <div class="grid grid-cols-4 xl:grid-cols-12 gap-2 xl:gap-4 bg-white">
+    <Link  :href="route('artists.works.show', {artist: artist, work: work })" class="col-span-4 md:col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-125 hover:z-20 transition ease-in delay-100" v-for="work in artist.works" :key="work.id">
       <div
         class="
           relative
@@ -19,7 +19,7 @@
       </div>
       <div
         class="p-12
-          py-1
+          py-1 
           text-sm
           tracking-widest
           font-light
@@ -27,7 +27,7 @@
           animate__animated animate__fadeInLeft
         "
       >
-        <div class="text-center py-2">
+        <div class="text-center py-2 w-40">
           <h1 class="truncate"> {{ work.title }}</h1>
           <!-- <span>some desc ... </span> -->
         </div>

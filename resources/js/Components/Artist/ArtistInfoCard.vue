@@ -28,7 +28,7 @@
       "
     >
       <div class="text-center">
-        <h1 class="">{{ artist.first_name }}</h1>
+        <h1 class="font-bold">{{ artist.first_name }}</h1>
         <span>B. {{ artist.date_of_birth }}</span>
       </div>
     </div>

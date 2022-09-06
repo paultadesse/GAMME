@@ -53,12 +53,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "border-l p-8 bg-white"
+  "class": "border-l p-8 bg-wshite"
 };
 var _hoisted_2 = ["innerHTML"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-    "class": "animate__animated animate__fadeInUp max-w-3xl text-gray-600 tracking-wider first-letter:text-4xl font-light leading-relaxed text-justify",
+    "class": "animate__animated animate__fadeInUp max-w-3xl text-gray-900 tracking-wider first-letter:text-4xl font-light leading-relaxed text-justify",
     innerHTML: $setup.bio
   }, null, 8
   /* PROPS */

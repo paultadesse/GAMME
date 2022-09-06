@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         });
 
         Artist::factory(19)->create()->each(function($artist) use($exhibitions) {
-            $artist->exhibitions()->attach($exhibitions->random(rand(1,3)));
+            $artist->exhibitions()->attach($exhibitions->random(rand(1,2)));
             Work::factory(rand(1,4))->create([
                 'artist_id' => $artist->id
             ]);

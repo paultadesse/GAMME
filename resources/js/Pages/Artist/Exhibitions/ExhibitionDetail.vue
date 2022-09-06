@@ -1,7 +1,7 @@
 <template>
-  <div class="pt-48 pb-12 xl:px-12">
+  <div class="pt-48 pb-12 xl:px-12 min-h-screen">
     <div class="xl:flex items-start bg-white justify-between">
-      <div class="w-full max-w-lg bg-white shadow-2xl xl:sticky top-0 mx-auto">
+      <div class="w-full max-w-lg bg-white xl:shadow-2xl xl:sticky top-0 mx-auto">
         <div
           class="
             relative
@@ -20,14 +20,14 @@
         </div>
       </div>
       <div class="flex-1 space-y-7 px-7">
-        <p class="uppercase tracking-wider text-4xl">{{ exhibition.title }}</p>
+        <p class="uppercase tracking-wider xl:text-4xl text-xl py-2">{{ exhibition.title }}</p>
         <hr />
         <div class="flex items-center">
-          <p class="uppercase text-xs text-gray-700 tracking-widest">
+          <p class="uppercase text-sm text-gray-700 tracking-widest">
             {{ exhibition.starting_date }}
           </p>
           <p class="text-sm">&nbsp; - &nbsp;</p>
-          <p class="uppercase text-xs text-gray-700 tracking-widest">
+          <p class="uppercase text-sm text-gray-700 tracking-widest">
             {{ exhibition.end_date }}
           </p>
         </div>
@@ -76,12 +76,7 @@
             :key="exhibition_image.id"
           />
         </div>
-        <!-- similar exhibitions by this artist -->
-        <p class="tracking-widest text-sm">
-          <span class="uppercase text-gray-500">Other exhibitions by - </span>
-          {{ artist.first_name }}
-        </p>
-        <Exhibition :artist="artist" />
+       
       </div>
     </div>
   </div>
@@ -103,22 +98,12 @@ import Exhibition from "../../../Components/Artist/Exhibition.vue";
 
 const props = defineProps({
   exhibition: Object,
-  artist: Object,
 });
 
 const exhibition = computed(() => {
   return props.exhibition;
 });
 
-const artist = computed(() => {
-  for (let index = 0; index < props.artist.exhibitions.length; index++) {
-    const element = props.artist.exhibitions[index];
-    // remove the current exhibition from the object
-    if (element.id === exhibition.value.id)
-      props.artist.exhibitions.splice(index, 1);
-  }
-  return props.artist;
-});
 
 function formatFeaturedArtists() {
   let artistsNames = "";

@@ -254,9 +254,38 @@
     </div>
   </div>
   <!-- list of artists -->
-  <div class="grid grid-cols-4  xl:grid-cols-12 gap-4 bg-white px-16">
-    <div class="col-span-2 xl:col-span-3 bg-white shadow-2xl hover:scale-105 hover:z-20 transition ease-in delay-100" v-for="artist in artists" :key="artist.id">
-      <ArtistInfoCard :artist="artist" />  
+  <div
+    class="
+      grid grid-cols-4
+      xl:grid-cols-12
+      gap-2
+      xl:gap-4
+      bg-white
+      xl:px-16
+      place-itmes-center
+      min-h-screen
+    "
+  >
+    <div
+      :class="[
+        index == 0 || index == 7 || index == 12
+          ? 'xl:col-span-4 col-span-4 row-span-2 self-center'
+          : 'col-span-6 self-center',
+        // index == 12 ? 'xl:col-span-6 row-span-1 bg-red-200' :'xl:col-span-2'
+      ]"
+      class="
+        md:col-span-2
+        bg-white
+        shadow-2xl
+        hover:scale-105 hover:z-20
+        transition
+        ease-in
+        delay-100
+      "
+      v-for="(artist, index) in artists"
+      :key="artist.id"
+    >
+      <ArtistInfoCard :artist="artist" />
     </div>
   </div>
 </template>
@@ -276,9 +305,9 @@ import { defineProps, computed } from "vue";
 import ArtistInfoCardVue from "../Components/Artist/ArtistInfoCard.vue";
 import ArtistInfoCard from "../Components/Artist/ArtistInfoCard.vue";
 const props = defineProps({
-  artists: Object
-}) 
-const artists = computed(()=> {
-  return props.artists
-})
+  artists: Object,
+});
+const artists = computed(() => {
+  return props.artists;
+});
 </script>

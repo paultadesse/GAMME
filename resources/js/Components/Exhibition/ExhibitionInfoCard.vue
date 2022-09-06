@@ -1,6 +1,5 @@
 <template>
-  <!-- <Link :href="route('exhibitions.show', { exhibition: exhibition })"> -->
-  <div class="">
+  <Link :href="route('exhibitions.show', { exhibition: exhibition })">
     <div
       class="
         relative
@@ -25,7 +24,7 @@
         tracking-widest
         font-light
         uppercase
-        animate__animated animate__fadeInLeft
+        animate__animated animate__fadeIn
       "
     >
       <div class="text-center">
@@ -38,7 +37,7 @@
       <p class="uppercase text-xs text-gray-500 tracking-widest">
         {{ exhibition.starting_date }}
       </p>
-      <p class="text-sm"> &nbsp; - &nbsp; </p>
+      <p class="text-sm">&nbsp; - &nbsp;</p>
       <p class="uppercase text-xs text-gray-500 tracking-widest">
         {{ exhibition.end_date }}
       </p>
@@ -50,16 +49,15 @@
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
         :alt="featured_artist.slug"
-        class="rounded-full w-16 h-16 object-cover border-4 border-white"
+        class="rounded-full w-16 h-16 object-cover border-4 border-white animate__animated animate__fadeInLeft"
         v-for="featured_artist in exhibition.artists"
         :key="featured_artist"
       />
     </div>
-    <!-- </Link> -->
-  </div>
+  </Link>
 </template>
   
-  <script setup>
+<script setup>
 import { Link } from "@inertiajs/inertia-vue3";
 import { DateTime } from "luxon";
 import { defineProps, computed } from "vue";
