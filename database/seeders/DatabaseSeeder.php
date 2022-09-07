@@ -17,19 +17,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(10)->create();
         // \App\Models\Artist::factory(19)->create();
-        $exhibitions = Exhibition::factory(10)->create()->each(function($exhibition){
-            ExhibitionImage::factory(rand(1,3))->create([
-                'exhibition_id' => $exhibition->id
-            ]);
-        });
 
-        Artist::factory(19)->create()->each(function($artist) use($exhibitions) {
-            $artist->exhibitions()->attach($exhibitions->random(rand(1,2)));
-            Work::factory(rand(1,4))->create([
-                'artist_id' => $artist->id
-            ]);
-        });
+        // $exhibitions = Exhibition::factory(10)->create()->each(function($exhibition){
+        //     ExhibitionImage::factory(rand(1,3))->create([
+        //         'exhibition_id' => $exhibition->id
+        //     ]);
+        // });
+
+        // Artist::factory(19)->create()->each(function($artist) use($exhibitions) {
+        //     $artist->exhibitions()->attach($exhibitions->random(rand(1,2)));
+        //     Work::factory(rand(1,4))->create([
+        //         'artist_id' => $artist->id
+        //     ]);
+        // });
     }
 }
