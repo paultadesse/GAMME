@@ -1,5 +1,5 @@
 <template>
-  <div class="border-l p-8 bg-wshite">
+  <div class="border-l p-8">
     <p
       class="
         animate__animated animate__fadeInUp
@@ -11,21 +11,20 @@
         leading-relaxed
         text-justify
       "
-      v-html="bio"
     >
-      
+      {{ bio }}
     </p>
   </div>
 </template>
 
 <script setup>
-import { computed, defineProps } from 'vue';
+import { computed, defineProps } from "vue";
 
 const props = defineProps({
-  biography: String
-})
+  biography: String,
+});
 
 const bio = computed(() => {
-  return props.biography
-})
+  return props.biography;
+});
 </script>

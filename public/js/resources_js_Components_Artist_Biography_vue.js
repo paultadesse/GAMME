@@ -53,16 +53,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "border-l p-8 bg-wshite"
+  "class": "border-l p-8"
 };
-var _hoisted_2 = ["innerHTML"];
+var _hoisted_2 = {
+  "class": "animate__animated animate__fadeInUp max-w-3xl text-gray-900 tracking-wider first-letter:text-4xl font-light leading-relaxed text-justify"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-    "class": "animate__animated animate__fadeInUp max-w-3xl text-gray-900 tracking-wider first-letter:text-4xl font-light leading-relaxed text-justify",
-    innerHTML: $setup.bio
-  }, null, 8
-  /* PROPS */
-  , _hoisted_2)]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.bio), 1
+  /* TEXT */
+  )]);
 }
 
 /***/ }),

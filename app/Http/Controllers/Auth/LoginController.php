@@ -25,7 +25,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             
             //redirect to admin dash!
-            return redirect()->intended('admin/dashboard');
+            return redirect()->intended(route('dashboard'));
         }
  
         return back()->withErrors([

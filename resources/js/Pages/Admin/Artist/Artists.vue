@@ -4,7 +4,7 @@
     <!-- component -->
     <div class="w-full">
       <div class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10 border rounded-lg">
-        <div class="sm:flex items-center justify-between">
+        <Link :href="route('artist.create')" class="sm:flex items-center justify-between">
           <button
             class="
               focus:ring-2 focus:ring-offset-2 focus:ring-black
@@ -50,7 +50,7 @@
               Add
             </p>
           </button>
-        </div>
+        </Link>
         <div class="mt-7 overflow-x-auto">
           <table class="w-full whitespace-nowrap">
             <tbody>
@@ -211,7 +211,7 @@
        
 
 <script>
-import Layout from "./Layout/Layout.vue";
+import Layout from "../Layout/Layout.vue";
 import { ref, computed } from "vue";
 export default {
   layout: Layout,
@@ -219,6 +219,9 @@ export default {
 </script>
 <script setup>
 import { Link } from "@inertiajs/inertia-vue3";
+import { computed } from "vue";
+
+const route = computed(() => { return window.route })
 const props = defineProps({
   artists: Object,
 });

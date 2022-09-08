@@ -30,8 +30,8 @@
         </NavLink>
         <hr />
         <div class="px-4 space-y-4">
-          <NavLink
-            href="dashboard"
+          <Link
+            :href="route('dashboard')"
             :class="[
               $page.component == 'Admin/Dashboard' ? 'bg-black text-white' : '',
             ]"
@@ -63,11 +63,14 @@
             </svg>
 
             <span> Dashboard </span>
-          </NavLink>
-          <NavLink
-            href="artists"
+          </Link>
+          <Link
+            :href="route('artist.list')"
             :class="[
-              $page.component == 'Admin/Artists' ? 'bg-black text-white' : '',
+              $page.component == 'Admin/Artist/Artists' ||
+              $page.component == 'Admin/Artist/Create'
+                ? 'bg-black text-white'
+                : '',
             ]"
             class="
               flex
@@ -97,7 +100,7 @@
             </svg>
 
             <span> Artists </span>
-          </NavLink>
+          </Link>
           <p
             class="
               flex
@@ -142,5 +145,11 @@
 </template>
   
   <script setup>
+import { Link } from "@inertiajs/inertia-vue3";
 import NavLink from "../../../Shared/NavLink.vue";
+import { computed } from "vue";
+
+const route = computed(() => {
+  return window.route;
+});
 </script>
