@@ -29,7 +29,7 @@ class AdminArtistController extends Controller
             'last_name' => ['required'],
             'biography' => ['required'],
             'birth_date' => ['required'],
-            'photo'  => ['required', 'mimes:jpeg,jpg,png', 'size:2000']
+            'photo'  => ['required', 'mimes:jpeg,jpg,png', 'max:2000']
         ]);
 
         $filename = '';
@@ -37,7 +37,7 @@ class AdminArtistController extends Controller
             $file = request()->file('photo');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('uploads/artists/', $filename);
+            request()->file('photo')->storeAs('public/uploads/artists', $filename);
         }
 
         $artist = Artist::create([
