@@ -1,7 +1,7 @@
 <template>
   <section class="flex">
     <div
-      class="
+      class="bg-gray-800 border-r
         flex flex-col
         justify-between
         pt-24
@@ -12,34 +12,22 @@
       "
     >
       <div class="space-y-6">
-        <NavLink href="dashboard" class="py-7 space-x-1 px-4">
-          <span class="uppercase text-2xl font-bold">gamme</span
-          ><span
-            class="
-              bg-black
-              text-white
-              px-2
-              py-0.5
-              tracking-wide
-              text-xs
-              uppercase
-              rounded
-            "
-            >Admin</span
-          >
-        </NavLink>
+        <Link :href="route('dashboard')" class="flex items-center py-7 space-x-1 px-4 text-white">
+          <span class="uppercase text-3xl tracking-wider font-bold">Gamme</span> <span>|</span> 
+          <span class="text-xs uppercase tracking-wider text-gray-300 font-light">Admin panel</span>
+        </Link>
         <hr />
         <div class="px-4 space-y-4">
           <Link
             :href="route('dashboard')"
             :class="[
-              $page.component == 'Admin/Dashboard' ? 'bg-black text-white' : '',
+              $page.component == 'Admin/Dashboard' ? 'bg-gray-200 text-black' : '',
             ]"
             class="
               flex
               items-center
               space-x-2
-              tracking-widest
+              tracking-widest text-white
               text-xs
               py-2
               px-2
@@ -68,15 +56,16 @@
             :href="route('artist.list')"
             :class="[
               $page.component == 'Admin/Artist/Artists' ||
-              $page.component == 'Admin/Artist/Create'
-                ? 'bg-black text-white'
+              $page.component == 'Admin/Artist/Create' ||
+              $page.component == 'Admin/Artist/Show'
+                ? 'bg-gray-200 text-black'
                 : '',
             ]"
             class="
               flex
               items-center
               space-x-2
-              tracking-widest
+              tracking-widest text-white
               text-xs
               py-2
               px-2
@@ -106,7 +95,7 @@
               flex
               items-center
               space-x-2
-              tracking-widest
+              tracking-widest text-white
               text-xs
               py-2
               px-2
@@ -133,7 +122,7 @@
         </div>
       </div>
       <div class="p-7">
-        <NavLink href="/logout" class="tracking-wider underline" method="post">
+        <NavLink href="/logout" class="tracking-wider bg-white px-3 py-2 rounded text-sm" method="post">
           Logout
         </NavLink>
       </div>

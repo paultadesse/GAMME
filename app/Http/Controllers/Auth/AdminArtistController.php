@@ -17,6 +17,13 @@ class AdminArtistController extends Controller
         return Inertia::render('Admin/Artist/Artists', compact('artists'));
     }
 
+    public function show(Artist $artist)
+    {
+        $artist->load(['works', 'exhibitions']);
+
+        return Inertia::render('Admin/Artist/Show', compact('artist'));
+    }
+
     public function create()
     {
         return Inertia::render('Admin/Artist/Create');

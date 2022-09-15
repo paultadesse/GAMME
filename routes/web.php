@@ -45,8 +45,9 @@ Route::prefix('exhibitions')->group(function(){
 Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
         Route::prefix('artist')->group(function() {
-            Route::get('list', [AdminArtistController::class,'index'])->name('artist.list');
+            Route::get('list', [AdminArtistController::class, 'index'])->name('artist.list');
             Route::get('create', [AdminArtistController::class, 'create'])->name('artist.create');
             Route::post('create', [AdminArtistController::class, 'store'])->name('artist.store');
+            Route::get('{artist}', [AdminArtistController::class, 'show'])->name('admin.artist.show');
         });
 });

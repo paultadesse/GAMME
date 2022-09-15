@@ -13,7 +13,8 @@
             placeholder="First name"
           />
           <div
-            class="mt-2 text-xs text-red-500" v-if="form.errors.first_name"
+            class="mt-2 text-xs text-red-500"
+            v-if="form.errors.first_name"
             v-text="form.errors.first_name"
           ></div>
         </div>
@@ -27,7 +28,8 @@
             placeholder="Last name"
           />
           <div
-            class="mt-2 text-xs text-red-500" v-if="form.errors.last_name"
+            class="mt-2 text-xs text-red-500"
+            v-if="form.errors.last_name"
             v-text="form.errors.last_name"
           ></div>
         </div>
@@ -42,7 +44,8 @@
             rows="7"
           ></textarea>
           <div
-            class="mt-2 text-xs text-red-500" v-if="form.errors.biography"
+            class="mt-2 text-xs text-red-500"
+            v-if="form.errors.biography"
             v-text="form.errors.biography"
           ></div>
         </div>
@@ -50,9 +53,27 @@
           <label for="birth" class="text-sm tracking-wider text-gray-500"
             >Birth date</label
           >
+          <div class="flex items-center space-x-2" v-if="date">
+            <p class="text-xs text-gray-500">selected</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 text-green-400"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
           <Datepicker v-model="date" inline />
           <div
-            class="mt-2 text-xs text-red-500" v-if="form.errors.birth_date"
+            class="mt-2 text-xs text-red-500"
+            v-if="form.errors.birth_date"
             v-text="form.errors.birth_date"
           ></div>
         </div>
@@ -81,9 +102,13 @@
               hover:file:cursor-pointer hover:file:bg-gray-700
             "
           />
-          <div class="mt-2 text-xs text-red-500" v-if="form.errors.photo" v-text="form.errors.photo"></div>
+          <div
+            class="mt-2 text-xs text-red-500"
+            v-if="form.errors.photo"
+            v-text="form.errors.photo"
+          ></div>
         </div>
-        
+
         <div class="col-span-8">
           <button
             class="

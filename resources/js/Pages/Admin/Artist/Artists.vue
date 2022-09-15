@@ -15,7 +15,7 @@
               justify-start
               px-3
               py-1
-              bg-black
+              bg-gray-800
               hover:bg-gray-700
               focus:outline-none
               rounded-full
@@ -26,8 +26,8 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
-              stroke="currentColor"
-              class="w-7 h-7 fill-white"
+              stroke=""
+              class="w-7 h-7 fill-white stroke-gray-800"
             >
               <path
                 stroke-linecap="round"
@@ -123,7 +123,7 @@
 
                 <td class="py-3 text-center">
                   <div class="flex item-center justify-center space-x-4">
-                    <div
+                    <Link :href="route('admin.artist.show', {artist: artist})"
                       class="w-4 transform hover:text-blue-500 hover:scale-110"
                     >
                       <svg
@@ -145,7 +145,7 @@
                           d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                         />
                       </svg>
-                    </div>
+                    </Link>
                     <div
                       class="w-4 transform hover:text-blue-500 hover:scale-110"
                     >
@@ -194,7 +194,7 @@
               :href="link.url"
               v-html="link.label"
               class="p-2 border"
-              :class="{ 'bg-black text-white': link.active }"
+              :class="{ 'bg-gray-800 text-white': link.active }"
             />
             <span
               v-else
