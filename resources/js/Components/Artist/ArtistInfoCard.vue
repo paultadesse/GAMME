@@ -10,10 +10,17 @@
       "
     >
       <img
+        v-if="artist.photo == ''"
         class="absolute h-full w-full object-cover p-4"
         src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
-        alt=""
+        alt="artist photo"
         srcset=""
+      />
+      <img
+        v-else
+        class="absolute h-full w-full object-cover p-4"
+        :src="'/storage/' + artist.photo"
+        :alt="artist.first_name"
       />
     </div>
     <div
@@ -36,11 +43,13 @@
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/inertia-vue3'
+import { Link } from "@inertiajs/inertia-vue3";
 import { DateTime } from "luxon";
 import { defineProps, computed } from "vue";
 
-const route = computed(() => { return window.route })
+const route = computed(() => {
+  return window.route;
+});
 
 const props = defineProps({
   artist: Object,
@@ -49,6 +58,4 @@ const props = defineProps({
 const artist = computed(() => {
   return props.artist;
 });
-
-
 </script>

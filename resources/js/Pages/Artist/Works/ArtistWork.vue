@@ -1,7 +1,9 @@
 <template>
   <div class="pt-48 pb-12 xl:px-12">
     <div class="xl:flex items-start bg-white justify-between">
-      <div class="w-full max-w-xl bg-white xl:shadow-2xl xl:sticky top-0 mx-auto">
+      <div
+        class="w-full max-w-xl bg-white xl:shadow-2xl xl:sticky top-0 mx-auto"
+      >
         <div
           class="
             relative
@@ -12,10 +14,17 @@
           "
         >
           <img
+            v-if="work.photo == ''"
             class="absolute h-full w-full object-cover"
             src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
             alt=""
             srcset=""
+          />
+          <img
+            v-else
+            class="absolute h-full w-full object-cover"
+            :src="'/storage/' + work.photo"
+            :alt="work.title"
           />
         </div>
       </div>
@@ -24,9 +33,16 @@
         <hr />
         <div class="flex items-center space-x-2">
           <img
+            v-if="artist.photo == ''"
             src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
             alt=""
             class="rounded-full w-16 h-16 object-cover"
+          />
+          <img
+            v-else
+            class="rounded-full w-16 h-16 object-cover"
+            :src="'/storage/' + artist.photo"
+            :alt="artist.title"
           />
           <p class="tracking-widest font-light">{{ artist.first_name }}</p>
         </div>

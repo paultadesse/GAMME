@@ -12,10 +12,18 @@
           "
         >
           <img
+            v-if="artist.photo == ''"
             class="absolute h-full w-full object-cover"
             src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
             alt=""
             srcset=""
+          />
+
+          <img
+            v-else
+            class="absolute h-full w-full object-cover"
+            :src="'/storage/' + artist.photo"
+            :alt="artist.first_name"
           />
         </div>
         <div
@@ -29,7 +37,7 @@
           "
         >
           <div class="px-4 text-white">
-            <h1 class="font-bold">{{ artist.first_name  }}</h1>
+            <h1 class="font-bold">{{ artist.first_name }}</h1>
             <span>B. {{ artist.date_of_birth }}</span>
           </div>
         </div>
@@ -43,20 +51,56 @@
             font-light
             uppercase
             tracking-widest
-            sticky top-0 bg-white bg-opacity-95 py-12 z-20
+            sticky
+            top-0
+            bg-white bg-opacity-95
+            py-12
+            z-20
           "
         >
-          <div :class="show_biography ? 'border-b-4 border-black text-lg font-bold' : 'text-gray-500'" class="cursor-pointer" @click="handleComponents('show_biography')">
+          <div
+            :class="
+              show_biography
+                ? 'border-b-4 border-black text-lg font-bold'
+                : 'text-gray-500'
+            "
+            class="cursor-pointer"
+            @click="handleComponents('show_biography')"
+          >
             Biography
           </div>
-          <div :class="show_works ? 'border-b-4 border-black text-lg font-bold' : 'text-gray-500'" class="cursor-pointer"  @click="handleComponents('show_works')">works</div>
-          <div :class="show_exhibition ? 'border-b-4 border-black text-lg font-bold' : 'text-gray-500'" class="cursor-pointer" @click="handleComponents('show_exhibition')">exhibition</div>
+          <div
+            :class="
+              show_works
+                ? 'border-b-4 border-black text-lg font-bold'
+                : 'text-gray-500'
+            "
+            class="cursor-pointer"
+            @click="handleComponents('show_works')"
+          >
+            works
+          </div>
+          <div
+            :class="
+              show_exhibition
+                ? 'border-b-4 border-black text-lg font-bold'
+                : 'text-gray-500'
+            "
+            class="cursor-pointer"
+            @click="handleComponents('show_exhibition')"
+          >
+            exhibition
+          </div>
         </div>
         <!-- artist content goes here it could be [ biography, works or exhibition ]  -->
         <div class="flex justify-center xl:pt-16 xl:px-4">
-            <Biography v-if="show_biography" class="z-10" :biography="artist.biography"/>
-            <Works v-if="show_works" class="z-10" :artist="artist" />
-            <Exhibition v-if="show_exhibition" class="z-10" :artist="artist"/>
+          <Biography
+            v-if="show_biography"
+            class="z-10"
+            :biography="artist.biography"
+          />
+          <Works v-if="show_works" class="z-10" :artist="artist" />
+          <Exhibition v-if="show_exhibition" class="z-10" :artist="artist" />
         </div>
       </div>
     </div>
@@ -76,34 +120,39 @@ const show_biography = ref(true);
 const show_works = ref(false);
 const show_exhibition = ref(false);
 
-const Biography = defineAsyncComponent(() => import('../../Components/Artist/Biography.vue'))
-const Works = defineAsyncComponent(() => import('../../Components/Artist/Works.vue'))
-const Exhibition = defineAsyncComponent(() => import('../../Components/Artist/Exhibition.vue'))
+const Biography = defineAsyncComponent(() =>
+  import("../../Components/Artist/Biography.vue")
+);
+const Works = defineAsyncComponent(() =>
+  import("../../Components/Artist/Works.vue")
+);
+const Exhibition = defineAsyncComponent(() =>
+  import("../../Components/Artist/Exhibition.vue")
+);
 
 const props = defineProps({
-  artist: Object
-})
+  artist: Object,
+});
 
-function handleComponents(show){
-    switch (show) {
-        case 'show_biography':
-            show_works.value = false;
-            show_exhibition.value = false;
-            show_biography.value = true;
-            break;
-        case 'show_works':
-            show_biography.value = false;
-            show_exhibition.value = false;
-            show_works.value = true;
-            break;
-        case 'show_exhibition':
-            show_biography.value = false;
-            show_works.value = false;
-            show_exhibition.value = true;
-            break;
-        default:
-            break;
-    }
+function handleComponents(show) {
+  switch (show) {
+    case "show_biography":
+      show_works.value = false;
+      show_exhibition.value = false;
+      show_biography.value = true;
+      break;
+    case "show_works":
+      show_biography.value = false;
+      show_exhibition.value = false;
+      show_works.value = true;
+      break;
+    case "show_exhibition":
+      show_biography.value = false;
+      show_works.value = false;
+      show_exhibition.value = true;
+      break;
+    default:
+      break;
+  }
 }
-
 </script>

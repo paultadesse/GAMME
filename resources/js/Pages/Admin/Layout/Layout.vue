@@ -57,7 +57,8 @@
             :class="[
               $page.component == 'Admin/Artist/Artists' ||
               $page.component == 'Admin/Artist/Create' ||
-              $page.component == 'Admin/Artist/Show'
+              $page.component == 'Admin/Artist/Show' ||
+              $page.component == 'Admin/Work/Create'
                 ? 'bg-gray-200 text-black'
                 : '',
             ]"
