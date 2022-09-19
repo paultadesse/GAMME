@@ -24,6 +24,6 @@ class ExhibitionController extends Controller
     {
         $exhibition->load(['artists', 'exhibitionImages']);
 
-        return Inertia::render('Artist/Exhibitions/ExhibitionDetail', compact('exhibition'));
+        return Inertia::render('Exhibition/ExhibitionDetail', compact('exhibition'));
     }
 }

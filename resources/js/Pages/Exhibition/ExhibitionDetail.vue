@@ -1,7 +1,9 @@
 <template>
   <div class="pt-48 pb-12 xl:px-12 min-h-screen">
     <div class="xl:flex items-start bg-white justify-between">
-      <div class="w-full max-w-lg bg-white xl:shadow-2xl xl:sticky top-0 mx-auto">
+      <div
+        class="w-full max-w-lg bg-white xl:shadow-2xl xl:sticky top-0 mx-auto"
+      >
         <div
           class="
             relative
@@ -12,15 +14,24 @@
           "
         >
           <img
+            v-if="exhibition.cover_image == ''"
             class="absolute h-full w-full object-cover"
             src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
             alt=""
             srcset=""
           />
+          <img
+            v-else
+            class="absolute h-full w-full object-cover"
+            :src="'/storage/' + exhibition.cover_image"
+            :alt="exhibition.title"
+          />
         </div>
       </div>
       <div class="flex-1 space-y-7 px-7">
-        <p class="uppercase tracking-wider xl:text-4xl text-xl py-2">{{ exhibition.title }}</p>
+        <p class="uppercase tracking-wider xl:text-4xl text-xl py-2">
+          {{ exhibition.title }}
+        </p>
         <hr />
         <div class="flex items-center">
           <p class="uppercase text-sm text-gray-700 tracking-widest">
@@ -43,10 +54,13 @@
             :key="featured_artist"
           />
         </div>
-        <div class="flex space-x-2">
+        <div v-if="exhibition.artists.length > 0" class="flex space-x-2">
           <p class="tracking-widest font-light">
             {{ formatFeaturedArtists() }}
           </p>
+        </div>
+        <div v-else>
+          <p class="text-xs">sorry, no artist yet</p>
         </div>
         <p
           class="
@@ -76,14 +90,13 @@
             :key="exhibition_image.id"
           />
         </div>
-       
       </div>
     </div>
   </div>
 </template>
     
-  <script>
-import Layout from "../../../Shared/Layout.vue";
+<script>
+import Layout from "../../Shared/Layout.vue";
 import { Link } from "@inertiajs/inertia-vue3";
 export default {
   layout: Layout,
@@ -94,7 +107,7 @@ export default {
 </script>
 <script setup>
 import { defineProps, computed } from "vue";
-import Exhibition from "../../../Components/Artist/Exhibition.vue";
+// import Exhibition from "../../../Components/Artist/Exhibition.vue";
 
 const props = defineProps({
   exhibition: Object,
@@ -103,7 +116,6 @@ const props = defineProps({
 const exhibition = computed(() => {
   return props.exhibition;
 });
-
 
 function formatFeaturedArtists() {
   let artistsNames = "";

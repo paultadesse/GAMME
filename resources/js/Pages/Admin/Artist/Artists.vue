@@ -3,8 +3,13 @@
     <h1 class="tracking-wide text-2xl font-bold">Artists</h1>
     <!-- component -->
     <div class="w-full">
-      <div class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10 border rounded-lg">
-        <Link :href="route('artist.create')" class="sm:flex items-center justify-between">
+      <div
+        class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10 border rounded-lg"
+      >
+        <Link
+          :href="route('artist.create')"
+          class="sm:flex items-center justify-between"
+        >
           <button
             class="
               focus:ring-2 focus:ring-offset-2 focus:ring-black
@@ -123,7 +128,8 @@
 
                 <td class="py-3 text-center">
                   <div class="flex item-center justify-center space-x-4">
-                    <Link :href="route('admin.artist.show', {artist: artist})"
+                    <Link
+                      :href="route('admin.artist.show', { artist: artist })"
                       class="w-4 transform hover:text-blue-500 hover:scale-110"
                     >
                       <svg
@@ -146,23 +152,6 @@
                         />
                       </svg>
                     </Link>
-                    <div
-                      class="w-4 transform hover:text-blue-500 hover:scale-110"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                        />
-                      </svg>
-                    </div>
                     <div
                       class="w-4 transform hover:text-blue-500 hover:scale-110"
                     >
@@ -221,7 +210,9 @@ export default {
 import { Link } from "@inertiajs/inertia-vue3";
 import { computed } from "vue";
 
-const route = computed(() => { return window.route })
+const route = computed(() => {
+  return window.route;
+});
 const props = defineProps({
   artists: Object,
 });

@@ -105,7 +105,9 @@
           <Link
             :href="route('exhibition.list')"
             :class="[
-              $page.component == 'Admin/Exhibition/Exhibitions'
+              $page.component == 'Admin/Exhibition/Exhibitions' ||
+              $page.component == 'Admin/Exhibition/Create' ||
+              $page.component == 'Admin/Exhibition/Show' 
                 ? 'bg-gray-200 text-black'
                 : '',
             ]"
@@ -118,6 +120,7 @@
               py-2
               px-2
               uppercase
+              rounded
             "
           >
             <svg
@@ -144,6 +147,7 @@
           href="/logout"
           class="tracking-wider bg-white px-3 py-2 rounded text-sm"
           method="post"
+          as="button"
         >
           Logout
         </NavLink>

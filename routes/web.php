@@ -59,5 +59,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     });
     Route::prefix('exhibition')->group(function () {
         Route::get('list', [AdminExhibitionController::class, 'index'])->name('exhibition.list');
+        Route::get('create', [AdminExhibitionController::class, 'create'])->name('exhibition.create');
+        Route::post('create', [AdminExhibitionController::class, 'store'])->name('exhibition.store');
+        Route::get('{exhibition}', [AdminExhibitionController::class, 'show'])->name('admin.exhibition.show');
     });
 });

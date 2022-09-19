@@ -10,10 +10,17 @@
       "
     >
       <img
+        v-if="exhibition.cover_image == ''"
         class="absolute h-full w-full object-cover p-4"
         src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
         alt=""
         srcset=""
+      />
+      <img
+        v-else
+        class="absolute h-full w-full object-cover"
+        :src="'/storage/' + exhibition.cover_image"
+        :alt="exhibition.title"
       />
     </div>
     <div

@@ -6,8 +6,8 @@
       <div
         class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10 border rounded-lg"
       >
-        <!-- <Link
-          :href="route('artist.create')"
+        <Link
+          :href="route('exhibition.create')"
           class="sm:flex items-center justify-between"
         >
           <button
@@ -55,7 +55,7 @@
               Add
             </p>
           </button>
-        </Link> -->
+        </Link>
         <div class="mt-7 overflow-x-auto">
           <table class="w-full whitespace-nowrap">
             <tbody>
@@ -74,6 +74,8 @@
                         leading-none
                         text-gray-700
                         mr-2
+                        max-w-xs
+                        truncate
                       "
                     >
                       {{ exhibition.title }}
@@ -150,12 +152,14 @@
 
                 <td class="py-3 text-center">
                   <div class="flex item-center justify-center space-x-4">
-                    <div
+                    <Link
+                      :href="
+                        route('admin.exhibition.show', {
+                          exhibition: exhibition,
+                        })
+                      "
                       class="w-4 transform hover:text-blue-500 hover:scale-110"
                     >
-                      <!-- <Link :href="route('admin.artist.show', {artist: artist})"
-                        class="w-4 transform hover:text-blue-500 hover:scale-110"
-                      > -->
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -175,25 +179,8 @@
                           d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                         />
                       </svg>
-                      <!-- </Link> -->
-                    </div>
-                    <div
-                      class="w-4 transform hover:text-blue-500 hover:scale-110"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                        />
-                      </svg>
-                    </div>
+                    </Link>
+
                     <div
                       class="w-4 transform hover:text-blue-500 hover:scale-110"
                     >
