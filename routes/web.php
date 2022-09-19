@@ -7,6 +7,7 @@ use App\Http\Controllers\ArtistWorkController;
 use App\Http\Controllers\Auth\AdminArtistController;
 use App\Http\Controllers\Auth\AdminController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ExhibitionArtistController;
 use App\Http\Controllers\ExhibitionController;
 use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
@@ -61,6 +62,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('list', [AdminExhibitionController::class, 'index'])->name('exhibition.list');
         Route::get('create', [AdminExhibitionController::class, 'create'])->name('exhibition.create');
         Route::post('create', [AdminExhibitionController::class, 'store'])->name('exhibition.store');
+        Route::post('artist/assign', [ExhibitionArtistController::class, 'store']);
+        Route::get('{exhibition}/artist/assign', [ExhibitionArtistController::class, 'create'])->name('exhibition.artist.assign');
         Route::get('{exhibition}', [AdminExhibitionController::class, 'show'])->name('admin.exhibition.show');
     });
 });

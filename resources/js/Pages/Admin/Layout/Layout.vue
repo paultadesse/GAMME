@@ -107,7 +107,8 @@
             :class="[
               $page.component == 'Admin/Exhibition/Exhibitions' ||
               $page.component == 'Admin/Exhibition/Create' ||
-              $page.component == 'Admin/Exhibition/Show' 
+              $page.component == 'Admin/Exhibition/Show' ||
+              $page.component == 'Admin/Exhibition/AssignArtist'
                 ? 'bg-gray-200 text-black'
                 : '',
             ]"

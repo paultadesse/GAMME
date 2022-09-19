@@ -2,54 +2,101 @@
   <div class="space-y-12">
     <h1 class="tracking-wide text-2xl font-bold">Exhibition</h1>
     <!-- component -->
-    <div>
-      <!-- <Link :href="route('artist.work.create', { artist: artist })">
-          <button
+    <div class="space-x-2">
+      <Link
+        :href="route('exhibition.artist.assign', { exhibition: exhibition })"
+      >
+        <button
+          class="
+            focus:ring-2 focus:ring-offset-2 focus:ring-black
+            mt-4
+            sm:mt-0
+            inline-flex
+            items-center
+            justify-start
+            px-3
+            py-1
+            bg-gray-800
+            hover:bg-gray-700
+            focus:outline-none
+            rounded-full
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke=""
+            class="w-7 h-7 fill-white stroke-gray-800"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+
+          <p
             class="
-              focus:ring-2 focus:ring-offset-2 focus:ring-black
-              mt-4
-              sm:mt-0
-              inline-flex
-              items-center
-              justify-start
-              px-3
-              py-1
-              bg-gray-800
-              hover:bg-gray-700
-              focus:outline-none
-              rounded-full
+              text-xs
+              uppercase
+              tracking-wider
+              font-medium
+              leading-none
+              text-white
+              px-1
             "
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke=""
-              class="w-7 h-7 fill-white stroke-gray-800"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-  
-            <p
-              class="
-                text-xs
-                uppercase
-                tracking-wider
-                font-medium
-                leading-none
-                text-white
-                px-1
-              "
-            >
-              Add Installation Images
-            </p>
-          </button>
-        </Link> -->
+            Assign Artists
+          </p>
+        </button>
+      </Link>
+      <button
+        class="
+          focus:ring-2 focus:ring-offset-2 focus:ring-black
+          mt-4
+          sm:mt-0
+          inline-flex
+          items-center
+          justify-start
+          px-3
+          py-1
+          bg-gray-800
+          hover:bg-gray-700
+          focus:outline-none
+          rounded-full
+        "
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke=""
+          class="w-7 h-7 fill-white stroke-gray-800"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+
+        <p
+          class="
+            text-xs
+            uppercase
+            tracking-wider
+            font-medium
+            leading-none
+            text-white
+            px-1
+          "
+        >
+          add exhibition image
+        </p>
+      </button>
     </div>
     <div class="flex space-x-2">
       <div class="w-4/6 bg-white p-8 border rounded">
