@@ -1,7 +1,9 @@
 <template>
   <section class="flex">
     <div
-      class="bg-gray-800 border-r
+      class="
+        bg-gray-800
+        border-r
         flex flex-col
         justify-between
         pt-24
@@ -12,23 +14,32 @@
       "
     >
       <div class="space-y-6">
-        <Link :href="route('dashboard')" class="flex items-center py-7 space-x-1 px-4 text-white">
-          <span class="uppercase text-3xl tracking-wider font-bold">Gamme</span> <span>|</span> 
-          <span class="text-xs uppercase tracking-wider text-gray-300 font-light">Admin panel</span>
+        <Link
+          :href="route('dashboard')"
+          class="flex items-center py-7 space-x-1 px-4 text-white"
+        >
+          <span class="uppercase text-3xl tracking-wider font-bold">Gamme</span>
+          <span>|</span>
+          <span
+            class="text-xs uppercase tracking-wider text-gray-300 font-light"
+            >Admin panel</span
+          >
         </Link>
         <hr />
         <div class="px-4 space-y-4">
           <Link
             :href="route('dashboard')"
             :class="[
-              $page.component == 'Admin/Dashboard' ? 'bg-gray-200 text-black' : '',
+              $page.component == 'Admin/Dashboard'
+                ? 'bg-gray-200 text-black'
+                : '',
             ]"
             class="
               flex
               items-center
               space-x-2
-              tracking-widest text-white
-              text-xs
+              tracking-widest
+              text-white text-xs
               py-2
               px-2
               uppercase
@@ -66,8 +77,8 @@
               flex
               items-center
               space-x-2
-              tracking-widest text-white
-              text-xs
+              tracking-widest
+              text-white text-xs
               py-2
               px-2
               uppercase
@@ -91,13 +102,19 @@
 
             <span> Artists </span>
           </Link>
-          <p
+          <Link
+            :href="route('exhibition.list')"
+            :class="[
+              $page.component == 'Admin/Exhibition/Exhibitions'
+                ? 'bg-gray-200 text-black'
+                : '',
+            ]"
             class="
               flex
               items-center
               space-x-2
-              tracking-widest text-white
-              text-xs
+              tracking-widest
+              text-white text-xs
               py-2
               px-2
               uppercase
@@ -119,11 +136,15 @@
             </svg>
 
             <span> Exhibitions </span>
-          </p>
+          </Link>
         </div>
       </div>
       <div class="p-7">
-        <NavLink href="/logout" class="tracking-wider bg-white px-3 py-2 rounded text-sm" method="post">
+        <NavLink
+          href="/logout"
+          class="tracking-wider bg-white px-3 py-2 rounded text-sm"
+          method="post"
+        >
           Logout
         </NavLink>
       </div>

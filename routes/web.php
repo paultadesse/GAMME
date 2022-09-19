@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminExhibitionController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\ArtistExhibitionController;
 use App\Http\Controllers\ArtistWorkController;
@@ -56,7 +57,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('{artist}/work/create', [ArtistWorkController::class, 'create'])->name('artist.work.create');
         Route::get('{artist}', [AdminArtistController::class, 'show'])->name('admin.artist.show');
     });
-    Route::post('/wooow', function () {
-        return request();
+    Route::prefix('exhibition')->group(function () {
+        Route::get('list', [AdminExhibitionController::class, 'index'])->name('exhibition.list');
     });
 });
