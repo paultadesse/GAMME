@@ -5,7 +5,7 @@
       class="
         col-span-4
         md:col-span-2
-        xl:col-span-3
+        xl:col-span-4
         bg-white
         shadow-2xl
         hover:scale-125 hover:z-20
@@ -20,21 +20,21 @@
         class="
           relative
           pb-full
-          bg-gray-500
+          bg-white
           xs:h-auto xs:square
           animate__animated animate__fadeIn animate_delay-2s
         "
       >
         <img
           v-if="work.photo == ''"
-          class="absolute h-full w-full object-cover"
+          class="absolute h-full w-full object-cover p-4"
           src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
-          alt=""
+          alt="artist photo"
           srcset=""
         />
         <img
           v-else
-          class="absolute h-full w-full object-cover"
+          class="absolute h-full w-full object-cover p-4"
           :src="'/storage/' + work.photo"
           :alt="work.title"
         />
@@ -42,17 +42,14 @@
       <div
         class="
           p-12
-          py-1
+          py-2
           text-sm
           tracking-widest
-          font-light
-          uppercase
           animate__animated animate__fadeInLeft
         "
       >
-        <div class="text-center py-2 w-40">
-          <h1 class="truncate">{{ work.title }}</h1>
-          <!-- <span>some desc ... </span> -->
+        <div class="text-center w-48">
+          <h1 class="truncate first-letter:uppercase">{{ work.title }}</h1>
         </div>
       </div>
     </Link>

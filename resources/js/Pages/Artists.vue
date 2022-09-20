@@ -38,9 +38,16 @@
       </form>
     </div>
   </div>
-  <div class="py-6">
+  <div class="px-16 py-6">
+    <h1 class="text-4xl font-extrabold lg:text-6xl">
+      <span
+        class="animate__animated animate__fadeInLeft uppercase tracking-widest"
+        >Meet Gamme's Artists</span
+      >
+    </h1>
+  </div>
+  <!-- <div class="py-6">
     <div class="grid place-items-center min-h-screen">
-      <!-- Responsive Grid Layout -->
       <div
         class="
           p-4
@@ -252,7 +259,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- list of artists -->
   <div
     class="
@@ -268,7 +275,7 @@
   >
     <div
       :class="[
-        index == 0 || index == 7 || index == 12
+        index == 0 || index == 7 || index == 12 || index == 19
           ? 'xl:col-span-4 col-span-4 row-span-2 self-center'
           : 'col-span-6 self-center',
         // index == 12 ? 'xl:col-span-6 row-span-1 bg-red-200' :'xl:col-span-2'

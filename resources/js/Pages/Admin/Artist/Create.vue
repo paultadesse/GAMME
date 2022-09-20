@@ -123,6 +123,7 @@
               tracking-wider
             "
             type="submit"
+            :disabled="processing"
           >
             submit
           </button>
@@ -152,6 +153,7 @@ const route = computed(() => {
   return window.route;
 });
 
+let processing = ref(false);
 const date = ref();
 
 let form = useForm({
@@ -167,7 +169,11 @@ function changeFile(e) {
 }
 
 let submit = () => {
-  form.submit("post", "create");
+  form.submit("post", "create", {
+    onStart: () => (processing.value = true),
+    onFinish: () => (processing.value = false),
+    onSuccess: () => form.reset(),
+  });
   // console.log(photoo.files)
   // console.log(form);
 };

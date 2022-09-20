@@ -18,7 +18,7 @@
       />
       <img
         v-else
-        class="absolute h-full w-full object-cover"
+        class="absolute h-full w-full object-cover p-4"
         :src="'/storage/' + exhibition.cover_image"
         :alt="exhibition.title"
       />

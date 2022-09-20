@@ -12,10 +12,17 @@
           "
         >
           <img
+            v-if="exhibition.cover_image == ''"
             class="absolute h-full w-full object-cover"
             src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
             alt=""
             srcset=""
+          />
+          <img
+            v-else
+            class="absolute h-full w-full object-cover"
+            :src="'/storage/' + exhibition.cover_image"
+            :alt="exhibition.title"
           />
         </div>
       </div>
@@ -34,14 +41,38 @@
         <p class="uppercase text-xs text-gray-500 tracking-widest">
           featured artists
         </p>
-        <div class="flex items-center -space-x-3 overflow-hidden">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
-            :alt="featured_artist.slug"
-            class="rounded-full w-16 h-16 object-cover border-4 border-white"
+        <div class="flex items-center -space-x-3 overflow-hidden px-4 py-2">
+          <div
             v-for="featured_artist in exhibition.artists"
             :key="featured_artist"
-          />
+          >
+            <img
+              v-if="featured_artist.photo == ''"
+              src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg"
+              :alt="featured_artist.slug"
+              class="
+                rounded-full
+                w-16
+                h-16
+                object-cover
+                border-4 border-white
+                animate__animated animate__fadeInLeft
+              "
+            />
+            <img
+              v-else
+              class="
+                rounded-full
+                w-16
+                h-16
+                object-cover
+                border-4 border-white
+                animate__animated animate__fadeInLeft
+              "
+              :src="'/storage/' + featured_artist.photo"
+              :alt="featured_artist.first_name"
+            />
+          </div>
         </div>
         <div class="flex space-x-2">
           <p class="tracking-widest font-light">
