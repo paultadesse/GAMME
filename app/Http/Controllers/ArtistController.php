@@ -10,7 +10,7 @@ class ArtistController extends Controller
 {
     public function index()
     {
-        $artists = Artist::orderBy('created_at')->get();
+        $artists = Artist::orderBy('created_at', 'desc')->latest()->get();
         // dd($artists);
         return Inertia::render('Artists', compact('artists'));
     }

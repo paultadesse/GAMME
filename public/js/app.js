@@ -23482,7 +23482,7 @@ var _hoisted_2 = {
   "class": "xl:flex items-start bg-white justify-center"
 };
 var _hoisted_3 = {
-  "class": "w-full max-w-md bg-black shadow-2xl mx-auto"
+  "class": "w-full max-w-2xl bg-black shadow-2xl mx-auto"
 };
 var _hoisted_4 = {
   "class": "relative pb-full bg-gray-500 xs:h-auto xs:rectangle animate__animated animate__fadeIn"
@@ -23505,7 +23505,7 @@ var _hoisted_9 = {
   "class": "font-bold"
 };
 var _hoisted_10 = {
-  "class": "flex-1"
+  "class": "xl:w-1/2"
 };
 var _hoisted_11 = {
   "class": "flex justify-evenly items-center font-light uppercase tracking-widest sticky top-0 bg-white bg-opacity-95 py-12 z-20"
@@ -23702,10 +23702,7 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "relative text-gray-600 focus-within:text-gray-400"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "absolute inset-y-0 left-0 flex items-center pl-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "submit",
-  "class": "p-1 focus:outline-none focus:shadow-outline"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button\n              type=\"submit\"\n              class=\"p-1 focus:outline-none focus:shadow-outline\"\n            > "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
@@ -23715,10 +23712,10 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "w-6 h-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
   d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </button> ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "search",
   name: "q",
-  "class": "border-b border-gray-300 py-2 text-sm text-white pl-10 focus:outline-none focus:bg-white focus:text-gray-900",
+  "class": "border-none py-2 text-sm text-white pl-10 focus:outline-none focus:bg-white focus:text-gray-900",
   placeholder: "Search...",
   autocomplete: "off"
 })])])])], -1
@@ -23741,7 +23738,7 @@ var _hoisted_3 = {
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"py-6\">\n    <div class=\"grid place-items-center min-h-screen\">\n      <div\n        class=\"\n          p-4\n          max-w-7xl\n          grid\n          gap-4\n          xs:grid-cols-2 xs:p-8\n          md:grid-cols-4\n          lg:gap-6\n          animate__animated animate__fadeIn\n        \"\n      >\n        <h1\n          class=\"\n            text-4xl\n            font-extrabold\n            xs:col-span-2 xs:grid xs:gap-4 xs:grid-cols-2\n            md:col-span-3 md:text-5xl md:grid-cols-3\n            lg:text-6xl\n          \"\n        >\n          <span\n            class=\"\n              md:col-span-2\n              animate__animated animate__fadeInLeft\n              uppercase\n              tracking-widest\n            \"\n            >Meet Gamme's Artists</span\n          >\n        </h1>\n        <p\n          class=\"\n            xs:row-start-2 xs:col-start-2 xs:self-center\n            md:col-start-1 md:col-span-2 md:pr-12 md:text-xl\n            font-light\n            tracking-widest\n          \"\n        >\n          using conscious skill and creative imagination the great artists of\n          the Renaissance an artist specializing in watercolors.\n        </p>\n        <div\n          class=\"\n            relative\n            pb-full\n            bg-gray-500\n            cursor-pointer\n            hover:hover:scale-105\n            transition\n            ease-in\n            delay-100\n            xs:h-auto xs:rectangle\n          \"\n        >\n          <img\n            class=\"absolute h-full w-full object-cover\"\n            src=\"https://upload.wikimedia.org/wikipedia/commons/0/0e/Afewerk_Tekle_1965.jpg\"\n            alt=\"\"\n          />\n        </div>\n        <div\n          class=\"\n            relative\n            pb-full\n            bg-gray-500\n            cursor-pointer\n            hover:hover:scale-105\n            transition\n            ease-in\n            delay-100\n            xs:h-auto xs:square\n          \"\n        >\n          <img\n            class=\"absolute h-full w-full object-cover\"\n            src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/270px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg\"\n            alt=\"\"\n            srcset=\"\"\n          />\n        </div>\n        <div\n          class=\"\n            relative\n            pb-full\n            bg-gray-900\n            cursor-pointer\n            hover:hover:scale-105\n            transition\n            ease-in\n            delay-100\n            xs:h-auto xs:square\n          \"\n        >\n          <img\n            class=\"absolute h-full w-full object-cover\"\n            src=\"https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2MzU4MjUzMDA4MDcwMzE4/portrait-of-leonardo-da-vinci-1452-1519-getty.jpg\"\n            alt=\"\"\n            srcset=\"\"\n          />\n        </div>\n        <div\n          class=\"\n            relative\n            pb-full\n            bg-gray-500\n            cursor-pointer\n            hover:hover:scale-105\n            transition\n            ease-in\n            delay-100\n            xs:h-auto xs:square\n            md:col-start-2\n          \"\n        >\n          <img\n            class=\"absolute h-full w-full object-cover\"\n            src=\"https://www.dorsetecho.co.uk/resources/images/11876072.jpg?type=responsive-gallery-fullscreen\"\n            alt=\"\"\n            srcset=\"\"\n          />\n        </div>\n        <div\n          class=\"\n            relative\n            pb-full\n            bg-gray-900\n            cursor-pointer\n            hover:hover:scale-105\n            transition\n            ease-in\n            delay-100\n            xs:h-auto xs:square\n          \"\n        >\n          <img\n            class=\"absolute h-full w-full object-cover\"\n            src=\"https://images.theconversation.com/files/465043/original/file-20220524-19-4v4f9u.jpg?ixlib=rb-1.1.0&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip\"\n            alt=\"\"\n          />\n        </div>\n        <div\n          class=\"\n            relative\n            pb-full\n            bg-gray-500\n            cursor-pointer\n            hover:hover:scale-105\n            transition\n            ease-in\n            delay-100\n            xs:h-auto xs:square\n          \"\n        >\n          <img\n            class=\"absolute h-full w-full object-cover\"\n            src=\"https://ethiopianmonitor.com/wp-content/uploads/2020/10/ElUXlVmXUAAI7RK-e1603889841383-800x445.jpg\"\n            alt=\"\"\n          />\n        </div>\n        <div\n          class=\"\n            relative\n            pb-full\n            bg-gray-500\n            cursor-pointer\n            hover:hover:scale-105\n            transition\n            ease-in\n            delay-100\n            xs:h-auto xs:square\n          \"\n        >\n          <img\n            class=\"absolute h-full w-full object-cover\"\n            src=\"https://live.staticflickr.com/8167/7333921470_68aa17b5a8_b.jpg\"\n            alt=\"\"\n          />\n        </div>\n        <div\n          class=\"\n            relative\n            pb-full\n            bg-gray-900\n            cursor-pointer\n            hover:hover:scale-105\n            transition\n            ease-in\n            delay-100\n            xs:h-auto xs:square\n          \"\n        >\n          <img\n            class=\"absolute h-full w-full object-cover\"\n            src=\"https://www.ethiosports.com/wp-content/uploads/2014/02/Desta-Hagos.jpg\"\n            alt=\"\"\n            srcset=\"\"\n          />\n        </div>\n        <p\n          class=\"\n            self-center\n            md:text-xl md:col-span-2 md:text-center md:px-4\n            font-light\n          \"\n        >\n          using conscious skill and creative imagination the great artists of\n          the Renaissance an artist specializing in watercolors.\n        </p>\n      </div>\n    </div>\n  </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" list of artists "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.artists, function (artist, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([[index == 0 || index == 7 || index == 12 || index == 19 ? 'xl:col-span-4 col-span-4 row-span-2 self-center' : 'col-span-6 self-center' // index == 12 ? 'xl:col-span-6 row-span-1 bg-red-200' :'xl:col-span-2'
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([[index == 0 || index == 7 || index == 12 || index == 19 || index == 24 ? 'xl:col-span-4 col-span-4 row-span-2 self-center' : 'col-span-6 self-center' // index == 12 ? 'xl:col-span-6 row-span-1 bg-red-200' :'xl:col-span-2'
       ], "md:col-span-2 bg-white shadow-2xl hover:scale-105 hover:z-20 transition ease-in delay-100"]),
       key: artist.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["ArtistInfoCard"], {

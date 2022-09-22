@@ -4,10 +4,10 @@
       <form method="GET">
         <div class="relative text-gray-600 focus-within:text-gray-400">
           <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-            <button
+            <!-- <button
               type="submit"
               class="p-1 focus:outline-none focus:shadow-outline"
-            >
+            > -->
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -19,13 +19,13 @@
               >
                 <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
               </svg>
-            </button>
+            <!-- </button> -->
           </span>
           <input
             type="search"
             name="q"
             class="
-              border-b border-gray-300
+              border-none
               py-2
               text-sm text-white
               pl-10
@@ -275,7 +275,7 @@
   >
     <div
       :class="[
-        index == 0 || index == 7 || index == 12 || index == 19
+        index == 0 || index == 7 || index == 12 || index == 19 || index == 24
           ? 'xl:col-span-4 col-span-4 row-span-2 self-center'
           : 'col-span-6 self-center',
         // index == 12 ? 'xl:col-span-6 row-span-1 bg-red-200' :'xl:col-span-2'

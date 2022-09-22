@@ -1,7 +1,7 @@
 <template>
   <div class="pt-48 pb-12 xl:px-12">
     <div class="xl:flex items-start bg-white justify-center">
-      <div class="w-full max-w-md bg-black shadow-2xl mx-auto">
+      <div class="w-full max-w-2xl bg-black shadow-2xl mx-auto">
         <div
           class="
             relative
@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div class="flex-1">
+      <div class="xl:w-1/2">
         <div
           class="
             flex
