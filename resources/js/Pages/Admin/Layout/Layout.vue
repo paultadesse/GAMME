@@ -158,12 +158,16 @@
       <slot />
     </section>
   </section>
+  <div>
+    <AlertHandler />
+  </div>
 </template>
   
   <script setup>
 import { Link } from "@inertiajs/inertia-vue3";
 import NavLink from "../../../Shared/NavLink.vue";
 import { computed } from "vue";
+import AlertHandler from "../../../Components/AlertHandler.vue";
 
 const route = computed(() => {
   return window.route;

@@ -56,6 +56,11 @@ class AdminArtistController extends Controller
             'photo' => 'uploads/artists/' . $filename
         ]);
 
+        request()->session()->flash('alert', [
+            'type' => "success",
+            'message' => "Artist added",
+        ]);
+
         return redirect()->route('artist.list');
     }
 }

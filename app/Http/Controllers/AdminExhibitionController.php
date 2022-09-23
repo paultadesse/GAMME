@@ -55,5 +55,10 @@ class AdminExhibitionController extends Controller
             'is_active' => true,
             'cover_image' => 'uploads/exhibitions/' . $filename
         ]);
+
+        request()->session()->flash('alert', [
+            'type' => "success",
+            'message' => "Exhibition created",
+        ]);
     }
 }

@@ -20,14 +20,17 @@ class LoginController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
- 
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            
+            $request->session()->flash('alert', [
+                'type' => "success",
+                'message' => "logged In successfully",
+            ]);
             //redirect to admin dash!
             return redirect()->intended(route('dashboard'));
         }
- 
+
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');

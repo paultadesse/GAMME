@@ -30,5 +30,10 @@ class ExhibitionArtistController extends Controller
             return redirect()->back();
         }
         $exhibition->artists()->attach(request('artist_id'));
+
+        request()->session()->flash('alert', [
+            'type' => "success",
+            'message' => "Artist Assigned",
+        ]);
     }
 }
